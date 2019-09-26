@@ -36,8 +36,6 @@ gulp.task('scripts', function() {
 		])
 		.pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
 		// .pipe(uglify()) // Сжимаем JS файл
-		.pipe(plumber())
-		.pipe(coffee())
 		.pipe(gulp.dest('app/js')); // Выгружаем в папку app/js
 });
 

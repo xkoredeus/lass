@@ -1,6 +1,7 @@
 @import "../fonts/fonts.css"
 $dark: #3B3B3B
 $yel: #F39C12
+$lgr: #B1B1B1
 $gr: #F4F4F4
 $tr: transparent
 
@@ -23,6 +24,13 @@ $g-bold: 'GothamPro-Bold'
   height: 100%
   left: 0
   top: 0
+@mixin ease
+  transition: .4s all ease
+
+// media-query "max-width"
+@mixin r($width)
+  @media only screen and (max-width: $width + "px")
+    @content
 
 .preloader
   position: fixed
@@ -36,14 +44,14 @@ $g-bold: 'GothamPro-Bold'
   justify-content: space-around
   align-content: space-around
   flex: 1 1 25%
-  background-color: $gr
+  background-color: #fff
   z-index: 1000
 .preloader__icon
   width: 4em
   height: 4em
   margin: auto
   fill: none
-  stroke: $brown
+  stroke: $dark
   animation: rotating-plane 3.2s infinite ease-in-out
 @keyframes rotating-plane
   0%
@@ -74,7 +82,7 @@ button, input, button:hover, button:active, button:focus,
 input:focus, input:active, .btn, .btn:after, select:focus, select:active
   text-decoration: none
   outline: none
-  transition: all 0.4s ease
+  +ease
   cursor: pointer
 a
   color: $dark
@@ -102,14 +110,14 @@ select
 input[type="text"]::placeholder,
 input[type="email"]::placeholder,
 input[type="tel"]::placeholder
-  color: $dark-blue
+  color: $dark
 input:focus,
 textarea:focus,
 input:active,
 textarea:active
   // background: #ffff
-  color: $dark-blue
-  box-shadow: inset 0px 0px 5px 1px $yellow
+  color: $dark
+  box-shadow: inset 0px 0px 5px 1px $yel
   outline: none
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button 
@@ -244,12 +252,11 @@ input[type="number"]
 .img-fluid
   max-width: 100%
   height: auto
-.shd,
+.shd
+  +ease
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
   &:hover
     box-shadow: 0px 30px 40px rgba(0, 80, 147, 0.25)
-.w100
-  width: 100%
 .b
   font-family: $g-bold
 .tac
@@ -260,21 +267,29 @@ input[type="number"]
   text-decoration: underline
 .upp
   text-transform: uppercase
+.lgr
+  color: $lgr
+.wt
+  color: #fff
+.fz22
+  font-size: 22px
 .btn
-  font-size: 14px
+  font-size: 16px
   font-family: $g-bold
   color: #fff
   text-align: center
+  text-transform: uppercase
   padding: 12px 30px
-  background-color: $yel
+  background: $yel
   display: inline-block
   border-radius: 3px
   position: relative
   outline: none
-  overflow: hidden
+  +ease
   &:hover
     color: #fff
-    background-color: $dark
+    opacity: .9
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15)
   &_add
     margin-left: auto
     margin-right: auto
@@ -407,20 +422,20 @@ input[type="number"]
       align-items: center
       justify-content: flex-start
       background-color: #fff
-      color: $dark-blue
+      color: $dark
       padding: 20px 25px 30px
       text-align: center
       &__ttl
-        font-family: $a-bold
+        font-family: $g-bold
         text-transform: uppercase
         font-size: 22px
         margin-bottom: 30px
       .form__input
-        border: 1px solid $dark-blue
-        color: $dark-blue
+        border: 1px solid $dark
+        color: $dark
         margin-bottom: 15px
       input.form__input::placeholder
-        color: $dark-blue
+        color: $dark
       .btn
         width: 100%
         margin-bottom: 15px
@@ -477,9 +492,9 @@ input[type="number"]
         height: auto
     button.owl-prev:hover,
     button.owl-next:hover
-      background-color: $yellow
+      background-color: $yel
       transform: scale(.9)
-      border-color: $yellow
+      border-color: $yel
     button.owl-prev.disabled,
     button.owl-next.disabled,
     button.owl-prev.disabled:hover,
@@ -503,7 +518,7 @@ input[type="number"]
     text-transform: uppercase
   &__subttl
     font-size: 28px
-    font-family: $a-bold
+    font-family: $g-bold
     letter-spacing: .5px
     margin-bottom: 35px
     margin-top: -10px
@@ -530,3 +545,48 @@ input[type="number"]
 //       background-image: url('../img/icon__file.jpg')
 //   &:not(:last-child)
 //     margin-bottom: 15px
+.header
+  background-color: $dark
+  padding: 15px
+  &__nav
+    &-link
+      font-size: 15px
+      color: $lgr
+      &:hover
+        color: $yel
+  &__cart
+    position: relative
+    &-svg
+      fill: #fff
+      +ease
+    &-val
+      top: -2px
+      right: -17px
+      position: absolute
+      color: #fff
+      font-family: $g-bold
+      font-size: 10px
+      background-color: $yel
+      padding: 2px 4px
+      border-radius: 10px
+    &-price
+      font-family: $g-bold
+      color: #fff
+    &:hover
+      .header__cart
+        &-svg
+          fill: $yel
+.banner
+  position: relative
+  padding: 35px 0
+  background-image: url('../img/offer__bg.jpg')
+  +cv
+  &::before
+    +ovl
+    background-color: #262C37
+    opacity: .7
+  &>*
+    position: relative
+  &__icon
+    min-width: 14px
+    fill: $lgr

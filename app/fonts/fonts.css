@@ -1,80 +1,97 @@
 @font-face {
-    font-family: 'MuseoIt500';
-    src: url('MuseoSansCyrl-500Italic.woff2') format('woff2'),
-        url('MuseoSansCyrl-500Italic.woff') format('woff');
-    font-weight: normal;
+    font-family: 'GothamPro-BlackItalic';
+    src: url('GothamPro-BlackItalic.woff2') format('woff2'),
+        url('GothamPro-BlackItalic.woff') format('woff');
+    font-weight: 900;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'MuseoIt700';
-    src: url('MuseoSansCyrl-700Italic.woff2') format('woff2'),
-        url('MuseoSansCyrl-700Italic.woff') format('woff');
-    font-weight: 600;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Museo500';
-    src: url('MuseoSansCyrl-500.woff2') format('woff2'),
-        url('MuseoSansCyrl-500.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'MuseoIt100';
-    src: url('MuseoSansCyrl-100Italic.woff2') format('woff2'),
-        url('MuseoSansCyrl-100Italic.woff') format('woff');
-    font-weight: 200;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Museo900';
-    src: url('MuseoSansCyrl-900.woff2') format('woff2'),
-        url('MuseoSansCyrl-900.woff') format('woff');
+    font-family: 'GothamPro-Bold';
+    src: url('GothamPro-Bold.woff2') format('woff2'),
+        url('GothamPro-Bold.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Museo700';
-    src: url('MuseoSansCyrl-700.woff2') format('woff2'),
-        url('MuseoSansCyrl-700.woff') format('woff');
-    font-weight: 600;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Museo300';
-    src: url('MuseoSansCyrl-300.woff2') format('woff2'),
-        url('MuseoSansCyrl-300.woff') format('woff');
+    font-family: 'GothamPro-LightItalic';
+    src: url('GothamPro-LightItalic.woff2') format('woff2'),
+        url('GothamPro-LightItalic.woff') format('woff');
     font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'GothamPro';
+    src: url('GothamPro.woff2') format('woff2'),
+        url('GothamPro.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Museo100';
-    src: url('MuseoSansCyrl-100.woff2') format('woff2'),
-        url('MuseoSansCyrl-100.woff') format('woff');
-    font-weight: 200;
+    font-family: 'GothamProNarrow-Medium';
+    src: url('GothamProNarrow-Medium.woff2') format('woff2'),
+        url('GothamProNarrow-Medium.woff') format('woff');
+    font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'MuseoIt900';
-    src: url('MuseoSansCyrl-900Italic.woff2') format('woff2'),
-        url('MuseoSansCyrl-900Italic.woff') format('woff');
+    font-family: 'GothamPro-BoldItalic';
+    src: url('GothamPro-BoldItalic.woff2') format('woff2'),
+        url('GothamPro-BoldItalic.woff') format('woff');
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
-    font-family: 'MuseoIt300';
-    src: url('MuseoSansCyrl-300Italic.woff2') format('woff2'),
-        url('MuseoSansCyrl-300Italic.woff') format('woff');
+    font-family: 'GothamPro-Light';
+    src: url('GothamPro-Light.woff2') format('woff2'),
+        url('GothamPro-Light.woff') format('woff');
     font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamPro-Medium';
+    src: url('GothamPro-Medium.woff2') format('woff2'),
+        url('GothamPro-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamPro-Italic';
+    src: url('GothamPro-Italic.woff2') format('woff2'),
+        url('GothamPro-Italic.woff') format('woff');
+    font-weight: normal;
     font-style: italic;
+}
+
+@font-face {
+    font-family: 'GothamPro-MediumItalic';
+    src: url('GothamPro-MediumItalic.woff2') format('woff2'),
+        url('GothamPro-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: 'GothamProNarrow-Bold';
+    src: url('GothamProNarrow-Bold.woff2') format('woff2'),
+        url('GothamProNarrow-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GothamPro-Black';
+    src: url('GothamPro-Black.woff2') format('woff2'),
+        url('GothamPro-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
 }
 
