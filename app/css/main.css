@@ -155,7 +155,7 @@ textarea,
 select {
   color: #3B3B3B;
   font-family: "GothamPro";
-  font-size: 14px;
+  font-size: 16px;
   padding: 12px 30px;
   border-radius: 2px;
   border: 1px solid #E0E0E0;
@@ -842,7 +842,7 @@ input[type="number"] {
   left: 0;
   top: 0;
   background-color: #262C37;
-  opacity: .7;
+  opacity: .8;
 }
 
 .banner > * {
@@ -852,4 +852,86 @@ input[type="number"] {
 .banner__icon {
   min-width: 14px;
   fill: #B1B1B1;
+}
+
+.banner__ttl {
+  color: #fff;
+  font-size: 30px;
+  font-family: "GothamPro-Bold";
+}
+
+.banner__search {
+  position: relative;
+  width: 100%;
+}
+
+.banner__search::before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  width: 26px;
+  height: 36px;
+  background: url("../img/banner__search-icon.svg") no-repeat 50% 50%/contain;
+}
+
+.banner__search-input {
+  width: 100%;
+  padding: 15px 50px 15px 37px;
+}
+
+.banner__search-btn {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 50%;
+  right: 25px;
+  background: #fff url("../img/icon__loupe.svg") no-repeat 50% 50%/contain;
+  padding: 0;
+  -webkit-transform: translateY(-50%) scale(0.96);
+      -ms-transform: translateY(-50%) scale(0.96);
+          transform: translateY(-50%) scale(0.96);
+  border: none;
+}
+
+.banner__search-btn:hover {
+  -webkit-transform: translateY(-50%) scale(1.05);
+      -ms-transform: translateY(-50%) scale(1.05);
+          transform: translateY(-50%) scale(1.05);
+}
+
+.banner__test {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  color: #fff;
+}
+
+.banner__test-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-bottom: 15px;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+
+.banner__test-ttl {
+  font-size: 18px;
+  font-family: "GothamPro-Bold";
+  margin-bottom: 10px;
 }

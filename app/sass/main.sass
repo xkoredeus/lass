@@ -103,7 +103,7 @@ textarea,
 select
   color: $dark
   font-family: $g-reg
-  font-size: 14px
+  font-size: 16px
   padding: 12px 30px
   border-radius: 2px
   border: 1px solid #E0E0E0
@@ -584,9 +584,57 @@ input[type="number"]
   &::before
     +ovl
     background-color: #262C37
-    opacity: .7
+    opacity: .8
   &>*
     position: relative
   &__icon
     min-width: 14px
     fill: $lgr
+  &__ttl
+    color: #fff
+    font-size: 30px
+    font-family: $g-bold
+  &__search
+    position: relative
+    width: 100%
+    &::before
+      content: ''
+      position: absolute
+      left: 15px
+      top: 15px
+      width: 26px
+      height: 36px
+      background: url('../img/banner__search-icon.svg') no-repeat 50% 50% / contain
+    &-input
+      width: 100%
+      padding: 15px 50px 15px 37px
+    &-btn
+      position: absolute
+      width: 26px
+      height: 26px
+      top: 50%
+      right: 25px
+      background: #fff url('../img/icon__loupe.svg') no-repeat 50% 50%/contain
+      padding: 0
+      transform: translateY(-50%) scale(.96)
+      border: none
+      &:hover
+        transform: translateY(-50%) scale(1.05)
+  &__test
+    display: flex
+    flex-direction: column
+    align-items: center
+    text-align: center
+    color: #fff
+    &-icon
+      width: 70px
+      height: 70px
+      border-radius: 50%
+      border: 2px solid #fff
+      margin-bottom: 15px
+      +ct
+      background-size: 60%
+    &-ttl
+      font-size: 18px
+      font-family: $g-bold
+      margin-bottom: 10px
