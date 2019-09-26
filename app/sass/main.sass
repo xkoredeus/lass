@@ -1,0 +1,532 @@
+@import "../fonts/fonts.css"
+$dark: #3B3B3B
+$yel: #F39C12
+$gr: #F4F4F4
+$tr: transparent
+
+$g-reg: 'GothamPro'
+$g-black: 'GothamPro-Black'
+$g-bold: 'GothamPro-Bold'
+
+@mixin ct
+  background-position: 50% 50%
+  background-size: contain
+  background-repeat: no-repeat
+@mixin cv
+  background-position: 50% 50%
+  background-size: cover
+  background-repeat: no-repeat
+@mixin ovl
+  content: ''
+  position: absolute
+  width: 100%
+  height: 100%
+  left: 0
+  top: 0
+
+.preloader
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  bottom: 0
+  min-height: 100vh
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  align-content: space-around
+  flex: 1 1 25%
+  background-color: $gr
+  z-index: 1000
+.preloader__icon
+  width: 4em
+  height: 4em
+  margin: auto
+  fill: none
+  stroke: $brown
+  animation: rotating-plane 3.2s infinite ease-in-out
+@keyframes rotating-plane
+  0%
+    transform: rotate(0deg)
+  50%
+    transform: rotate(180deg)
+    // stroke: $green
+  100%
+    transform: rotate(360deg)
+    // stroke: $brown
+body
+  scroll-behavior: smooth
+  background-color: #fff
+  font-family: $g-reg
+  color: $dark
+  font-size: 16px
+  line-height: 1.4
+  position: relative
+  -webkit-font-smoothing: antialiased
+h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::selection, p::selection, a::selection, span::selection, div::selection, img::selection, mark::selection, ul::selection, li::selection
+  color           : #fff
+  background-color : $dark
+::selection
+  color           : #fff
+  background-color : $dark
+a, a:hover, a:active, a:focus,
+button, input, button:hover, button:active, button:focus,
+input:focus, input:active, .btn, .btn:after, select:focus, select:active
+  text-decoration: none
+  outline: none
+  transition: all 0.4s ease
+  cursor: pointer
+a
+  color: $dark
+  &:hover
+    color: $yel
+button
+  border: $tr
+  background: none
+option
+  color: $dark
+textarea
+  resize:none
+  overflow: hidden
+  &::placeholder
+    color: $dark
+input,
+textarea,
+select
+  color: $dark
+  font-family: $g-reg
+  font-size: 14px
+  padding: 12px 30px
+  border-radius: 2px
+  border: 1px solid #E0E0E0
+input[type="text"]::placeholder,
+input[type="email"]::placeholder,
+input[type="tel"]::placeholder
+  color: $dark-blue
+input:focus,
+textarea:focus,
+input:active,
+textarea:active
+  // background: #ffff
+  color: $dark-blue
+  box-shadow: inset 0px 0px 5px 1px $yellow
+  outline: none
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button 
+  -webkit-appearance: none
+input[type="number"]
+  -moz-appearance: textfield
+  appearance: textfield
+.select__wrp
+  border: 1px solid $gr
+  border-radius: 3px
+  position: relative
+  display: flex
+  background-color: $tr
+  &::before
+    content: ''
+    position: absolute
+    width: 20px
+    height: 20px
+    background: url('../img/icon__select-arr.svg') no-repeat 50% 50% / contain
+    top: 50%
+    transform: translateY(-50%)
+    right: 9px
+  select
+    width: 100%
+    background-color: $tr
+    border: none
+    padding: 8px 40px 8px 12px
+    position: relative
+    appearance: none
+    option
+      width: 100%
+  &:hover
+    &::before
+      transform: translateY(-50%) scale(.9)
+.quantity
+  position: relative
+  max-width: 129px
+  input
+    width: 100%
+  &-num
+    // max-width: 110px
+    text-align: center
+  &-minus,
+  &-plus
+    position: absolute
+    height: 50%
+    top: 50%
+    transform: translate(0,-50%)
+    font-family: $g-bold
+    width: 22px
+    height: 22px
+    background-color: #F3F3F3
+    border: none
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    line-height: 1
+    &:hover
+      background-color: #ccc
+  &-minus
+    left: 15px
+    color: $dark
+  &-plus
+    right: 15px
+    color: $dark
+.tabs
+  &__content-item
+    transition: unset
+  &__list
+    list-style-type: none
+    padding: 0
+    margin: 0
+// .checkbox
+//   cursor: pointer
+//   position: relative
+//   margin-bottom: 0
+//   input[type="checkbox"],
+//   input[type="radio"]
+//     position: absolute
+//     z-index: 1
+//     opacity: 0
+//     width: 100%
+//     height: 20px
+//     cursor: pointer
+//   .checkbox__text
+//     font-size: 14px
+//     position: relative
+//     padding-left: 30px
+//     cursor: pointer
+//     width: 100%
+//     height: 30px
+//     display: block
+//     &::before
+//       content: ''
+//       position: absolute
+//       top: 0px
+//       left: -2px
+//       width: 20px
+//       height: 20px
+//       border-radius: 2px
+//       border: 1px solid #c3c2c2
+//       background: #fff
+//     &::after
+//       content: ''
+//       position: absolute
+//       top: 50%
+//       margin-top: -11px
+//       left: 2px
+//       width: 12px
+//       height: 12px
+//       background-color: $blue
+//       border-radius: 2px
+//       opacity: 0
+//       transform: scale(0)
+//       transition: 0.2s
+//     a
+//       color: $blue
+//       text-decoration: underline
+//       position: relative
+//       z-index: 2
+//   input[type="checkbox"]:checked + .checkbox__text:after,
+//   input[type="radio"]:checked + .checkbox__text:after
+//     opacity: 1
+//     transform: scale(1)
+//   input[type="checkbox"]:checked + .checkbox__text:before,
+//   input[type="radio"]:checked + .checkbox__text:before
+//     background-color: #fff
+    // border: 1px solid #39B54A
+  // input[type="checkbox"]:focus + .checkbox__text:before
+  //  box-shadow: inset 0 1px 2px rgba(0,0,0,.2), 0 0 0 1px rgba(49, 179, 237, 0.61)
+.img-fluid
+  max-width: 100%
+  height: auto
+.shd,
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+  &:hover
+    box-shadow: 0px 30px 40px rgba(0, 80, 147, 0.25)
+.w100
+  width: 100%
+.b
+  font-family: $g-bold
+.tac
+  text-align: center
+.tal
+  text-align: left !important
+.und
+  text-decoration: underline
+.upp
+  text-transform: uppercase
+.btn
+  font-size: 14px
+  font-family: $g-bold
+  color: #fff
+  text-align: center
+  padding: 12px 30px
+  background-color: $yel
+  display: inline-block
+  border-radius: 3px
+  position: relative
+  outline: none
+  overflow: hidden
+  &:hover
+    color: #fff
+    background-color: $dark
+  &_add
+    margin-left: auto
+    margin-right: auto
+    max-width: 192px
+    padding-right: 80px
+    overflow: hidden
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2)
+    img
+      height: 100%
+      position: absolute
+      right: 0
+      top: 0
+    &:hover
+      img
+        transform: scale(1.05)
+  &_file
+    position: relative
+    color: #fff
+    cursor: pointer
+    max-width: 230px
+    padding-right: 56px
+    padding-left: 15px
+    .upload__file
+      width: 0.1px
+      height: 0.1px
+      opacity: 0
+      overflow: hidden
+      position: absolute
+      z-index: -1
+    label.filename
+      cursor: pointer
+      margin-bottom: 0
+      cursor: pointer
+    img
+      height: 100%
+      position: absolute
+      right: 0
+      top: 0
+    &:hover
+      img
+        transform: scale(1.05)
+.list
+  &_circle
+    list-style-type: none
+    padding-left: 0
+    li
+      padding-left: 25px
+      position: relative
+      &
+        margin-bottom: 10px
+      &::before
+        content: ''
+        position: absolute
+        width: 8px
+        height: 8px
+        background-color: $yel
+        left: 0
+        top: 8px
+        border-radius: 50%
+  &_string
+    list-style-type: none
+    padding-left: 0
+    li
+      padding-left: 25px
+      position: relative
+      &
+        margin-bottom: 10px
+      &::before
+        content: ''
+        position: absolute
+        width: 12px
+        height: 1px
+        background-color: $dark
+        left: 0
+        top: 9px
+  &_num
+    padding-left: 0
+    counter-reset: list1
+    li
+      list-style-type: none
+      &
+        margin-bottom: 10px
+      &::before
+        counter-increment: list1
+        content: counter(list1)
+        color: $dark
+        font-size: 16px
+        font-family: $g-bold
+        margin-right: 15px
+
+.popup__container
+  padding: 40px
+  background-color: transparent
+  *,
+  *::before,
+  *::after
+    transition: .3s all ease
+  .fancybox-close-small
+    top: 40px
+    right: 40px
+    color: #000
+  .popup__wrp
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: center
+    position: relative
+    &::before
+      z-index: 1
+      content: ''
+      position: absolute
+      height: 110%
+      width: 110%
+      top: -5%
+      right: -5%
+      bottom: -5%
+      left: -5%
+      z-index: 1
+      background-color: $dark
+      opacity: .7
+  .popup_call__wrp
+    max-width: 320px
+    .popup
+      width: 100%
+      height: 100%
+      position: relative
+      z-index: 2
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: flex-start
+      background-color: #fff
+      color: $dark-blue
+      padding: 20px 25px 30px
+      text-align: center
+      &__ttl
+        font-family: $a-bold
+        text-transform: uppercase
+        font-size: 22px
+        margin-bottom: 30px
+      .form__input
+        border: 1px solid $dark-blue
+        color: $dark-blue
+        margin-bottom: 15px
+      input.form__input::placeholder
+        color: $dark-blue
+      .btn
+        width: 100%
+        margin-bottom: 15px
+      &__policy
+        margin-top: 15px
+        max-width: 230px
+        text-align: center
+        font-size: 12px
+        a
+          font-size: 12px 
+          color: #00BFF3
+.owl-carousel
+  .owl-item
+    img
+      width: auto !important
+  .owl-dots
+    position: absolute
+    width: 100%
+    display: flex
+    justify-content: center
+    bottom: 0
+    button.owl-dot
+      width: 13px
+      height: 13px
+      border: 2.5px solid #fff
+      border-radius: 50%
+      background-color: transparent
+      position: relative
+      // transform: scale(1)
+      &:not(:last-child)
+        margin-right: 10px
+      &.active
+        // transform: scale(.8)
+        border-color: transparent
+        background-color: #fff
+  .owl-nav
+    button.owl-prev,
+    button.owl-next
+      width: 31px
+      height: 31px
+      position: absolute
+      bottom: 50%
+      margin-bottom: -25.5px
+      border-radius: 50%
+      padding: 0
+      background-color: #fff
+      border: 1.5px solid $dark
+      display: flex
+      justify-content: center
+      align-items: center
+      img
+        max-width: 17px
+        max-height: 17px
+        height: auto
+    button.owl-prev:hover,
+    button.owl-next:hover
+      background-color: $yellow
+      transform: scale(.9)
+      border-color: $yellow
+    button.owl-prev.disabled,
+    button.owl-next.disabled,
+    button.owl-prev.disabled:hover,
+    button.owl-next.disabled:hover
+      opacity: 0
+      cursor: default
+      
+    button.owl-prev
+      left: 0
+    button.owl-next
+      right: 0
+.section
+  &_inner
+    padding: 60px 0
+  &__ttl
+    font-size: 34px
+    font-family: $g-bold
+    letter-spacing: .5px
+    margin-bottom: 35px
+    text-align: center
+    text-transform: uppercase
+  &__subttl
+    font-size: 28px
+    font-family: $a-bold
+    letter-spacing: .5px
+    margin-bottom: 35px
+    margin-top: -10px
+    text-align: center
+// .input__wrp
+//   position: relative
+//   max-width: 230px
+//   input,
+//   select
+//     width: 100%
+//     padding-left: 35px
+//   &::before
+//     content: ''
+//     position: absolute
+//     left: 10px
+//     top: 8px
+//     width: 12px
+//     height: 17px
+//     background-position: 50% 50%
+//     background-size: contain
+//     background-repeat: no-repeat
+//   &_file
+//     &::before
+//       background-image: url('../img/icon__file.jpg')
+//   &:not(:last-child)
+//     margin-bottom: 15px
