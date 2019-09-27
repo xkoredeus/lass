@@ -83,7 +83,6 @@ input:focus, input:active, .btn, .btn:after, select:focus, select:active
   text-decoration: none
   outline: none
   +ease
-  cursor: pointer
 a
   color: $dark
   &:hover
@@ -98,6 +97,8 @@ textarea
   overflow: hidden
   &::placeholder
     color: $dark
+button
+  color: $dark
 input,
 textarea,
 select
@@ -134,12 +135,13 @@ input[type="number"]
   &::before
     content: ''
     position: absolute
-    width: 20px
-    height: 20px
+    width: 13px
+    height: 7px
     background: url('../img/icon__select-arr.svg') no-repeat 50% 50% / contain
     top: 50%
     transform: translateY(-50%)
     right: 9px
+    +ease
   select
     width: 100%
     background-color: $tr
@@ -267,12 +269,18 @@ input[type="number"]
   text-decoration: underline
 .upp
   text-transform: uppercase
+.ttn
+  text-transform: none !important
+.curp
+  cursor: pointer
 .lgr
   color: $lgr
 .wt
   color: #fff
 .fz22
   font-size: 22px
+.fz18
+  font-size: 18px
 .btn
   font-size: 16px
   font-family: $g-bold
@@ -290,21 +298,57 @@ input[type="number"]
     color: #fff
     opacity: .9
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15)
-  &_add
-    margin-left: auto
-    margin-right: auto
-    max-width: 192px
-    padding-right: 80px
+  &_submit
+    display: flex
+    padding: 0
+    border: none
     overflow: hidden
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2)
-    img
-      height: 100%
-      position: absolute
-      right: 0
-      top: 0
+    &__price
+      height: 45px
+      font-family: $g-bold
+      color: $dark
+      padding: 10px 15px
+      text-align: center
+      border: 1px solid $lgr
+      border-top-left-radius: 3px
+      border-bottom-left-radius: 3px
+      position: relative
+      &::before
+        +ovl
+        background-color: $yel
+        +ease
+        opacity: 0
+        transform: translateX(100%)
+      &::after
+        content: ''
+        position: absolute
+        right: 0
+        top: 50%
+        transform: translateY(-50%)
+        width: 1px
+        height: 30px
+        background-color: $dark
+        +ease
+      span
+        position: relative
+    &__svg
+      height: 45px
+      padding: 10px
+      fill: #fff
+      background-color: $yel
+      border: 1px solid $yel
+      border-top-right-radius: 3px
+      border-bottom-right-radius: 3px
+      position: relative
     &:hover
-      img
-        transform: scale(1.05)
+      .btn_submit__price
+        color: #fff
+        border-color: $yel
+        &::before
+          opacity: 1
+          transform: translateX(0%)
+        &::after
+          background-color: #fff
   &_file
     position: relative
     color: #fff
@@ -331,6 +375,10 @@ input[type="number"]
     &:hover
       img
         transform: scale(1.05)
+.fancy-link
+  +ease
+  &:hover
+    color: $yel
 .list
   &_circle
     list-style-type: none
@@ -379,7 +427,6 @@ input[type="number"]
         font-size: 16px
         font-family: $g-bold
         margin-right: 15px
-
 .popup__container
   padding: 40px
   background-color: transparent
@@ -481,20 +528,25 @@ input[type="number"]
       margin-bottom: -25.5px
       border-radius: 50%
       padding: 0
-      background-color: #fff
+      background-color: $tr
       border: 1.5px solid $dark
       display: flex
       justify-content: center
       align-items: center
-      img
+      +ease
+      svg
         max-width: 17px
         max-height: 17px
         height: auto
+        fill: none
+        stroke: $dark
+        +ease
     button.owl-prev:hover,
     button.owl-next:hover
       background-color: $yel
-      transform: scale(.9)
       border-color: $yel
+      svg
+        stroke: #fff
     button.owl-prev.disabled,
     button.owl-next.disabled,
     button.owl-prev.disabled:hover,
@@ -509,6 +561,18 @@ input[type="number"]
 .section
   &_inner
     padding: 60px 0
+  &_dec
+    position: relative
+    &::after
+      content: ''
+      position: absolute
+      height: 1px
+      width: 100%
+      max-width: 569px
+      left: 50%
+      bottom: 0px
+      transform: translateX(-50%)
+      background-color: $lgr
   &__ttl
     font-size: 34px
     font-family: $g-bold
@@ -587,6 +651,25 @@ input[type="number"]
     opacity: .8
   &>*
     position: relative
+  &__logo
+    +ease
+    &:hover
+      transform: scale(.9)
+  &__info
+    &-col
+      min-height: 90px
+      position: relative
+    &-border
+      position: absolute
+      width: 1px
+      height: 100%
+      top: 0
+      right: -15px
+      background-color: $lgr
+      opacity: .2
+  &__btn
+    padding-top: 17px
+    padding-bottom: 17px
   &__icon
     min-width: 14px
     fill: $lgr
@@ -594,26 +677,21 @@ input[type="number"]
     color: #fff
     font-size: 30px
     font-family: $g-bold
+    max-width: 910px
+    margin-left: auto
+    margin-right: auto
   &__search
     position: relative
     width: 100%
-    &::before
-      content: ''
-      position: absolute
-      left: 15px
-      top: 15px
-      width: 26px
-      height: 36px
-      background: url('../img/banner__search-icon.svg') no-repeat 50% 50% / contain
     &-input
       width: 100%
-      padding: 15px 50px 15px 37px
+      padding: 15px 50px 15px 30px
     &-btn
       position: absolute
-      width: 26px
-      height: 26px
+      width: 20px
+      height: 20px
       top: 50%
-      right: 25px
+      right: 30px
       background: #fff url('../img/icon__loupe.svg') no-repeat 50% 50%/contain
       padding: 0
       transform: translateY(-50%) scale(.96)
@@ -633,8 +711,202 @@ input[type="number"]
       border: 2px solid #fff
       margin-bottom: 15px
       +ct
-      background-size: 60%
+      background-size: 35px 35px
+      +ease
     &-ttl
       font-size: 18px
       font-family: $g-bold
       margin-bottom: 10px
+    &:hover
+      .banner__test-icon
+        transform: scale(.95)
+        border-color: $yel
+.fil
+  background: $gr
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)
+  border-radius: 3px
+  padding: 30px
+  .select__wrp
+    select
+      border: 1px solid $lgr
+  &-nav
+    &__link
+      font-size: 13px
+      background-color: $gr
+      text-align: center
+      border-radius: 3px
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)
+      padding: 12px 18px
+      min-width: 133px
+      margin-bottom: 10px
+      &:hover
+        color: #fff
+        background-color: $yel
+  &-slider
+    .owl
+      &-item.active
+        .fil-slider__item
+          opacity: 1
+      &-nav
+        button
+          &.owl
+            &-prev
+              left: 50%
+              margin-left: calc(-1110px/2)
+            &-next
+              right: 50%
+              margin-right: calc(-1110px/2)
+    &__item
+      margin-top: 50px
+      margin-bottom: 50px
+      padding: 60px 0px
+      opacity: 0
+      +cv
+      +ease
+      &-in
+        position: relative
+        max-width: 870px
+        margin-left: auto
+        margin-right: auto
+        font-size: 25px
+        font-family: $g-bold
+        text-transform: uppercase
+        &_1
+          span
+            background-color: $dark
+            color: #fff
+            padding: 4px 15px
+            &:nth-child(2)
+              width: 70%
+      &-img
+        position: absolute
+        width: 449px
+        height: 293px
+        right: 0
+        top: -85px
+        +ct
+.part
+  &__item
+    width: 149px
+    height: 151px
+    position: relative
+    margin-bottom: 10px
+    &::before
+      content: ''
+      position: absolute
+      width: 95%
+      height: 95%
+      right: 0
+      bottom: 0
+      border: 1px solid $lgr
+      border-radius: 3px
+    &-in
+      width: 95%
+      height: 95%
+      background-color: $gr
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)
+      border-radius: 3px
+      display: flex
+      justify-content: center
+      align-items: center
+      position: relative
+      +ease
+    &-img
+      width: 86px
+      height: 50px
+      +ct
+    &:hover
+      .part__item-in
+        background-color: $yel
+        transform: translate(5%,5%)
+.hit
+  &__in
+    .owl
+      &-nav
+        button
+          &.owl
+            &-prev
+              border-color: $lgr
+              top: -74px
+              left: auto
+              right: 45px
+              svg
+                stroke: $lgr
+            &-next
+              border-color: $lgr
+              top: -74px
+              svg
+                stroke: $lgr
+  &__item
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    max-width: 270px
+    margin-left: auto
+    margin-right: auto
+    &-top
+      background-color: $gr
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)
+      border-radius: 3px
+      width: 100%
+      height: 270px
+      border: 5px solid $gr
+      +ease
+      display: flex
+      justify-content: center
+      align-items: center
+      &-img
+        width: 192px
+        height: 192px
+        +ct
+    &:hover
+      .hit__item-top
+        border-color: #fff
+.test
+  &__item
+    position: relative
+    &::before
+      content: ''
+      position: absolute
+      width: 97%
+      height: 97%
+      right: 0
+      bottom: -3%
+      border: 1px solid $lgr
+      border-radius: 3px
+    &-in
+      width: 97%
+      height: 97%
+      min-height: 390px
+      color: #fff
+      background-color: $gr
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)
+      border-radius: 3px
+      display: flex
+      flex-direction: column
+      align-items: center
+      position: relative
+      border-radius: 3px
+      overflow: hidden
+      padding: 35px 15px
+      +ease
+      +cv
+      &::before
+        +ovl
+        background-color: $dark
+        opacity: .95
+      &>*
+        position: relative
+    &-icon
+      +ct
+      width: 100%
+      height: 100%
+      background-size: 35px 35px
+      &-wrp
+        width: 80px
+        height: 80px
+        border-radius: 50%
+        background-color: #fff
+    &:hover
+      .test__item-in
+        transform: translate(3%,3%)

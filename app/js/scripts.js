@@ -1,10 +1,36 @@
 $(function() {
-  $('.main-slider__cnt').owlCarousel({
+  $('.fil-slider').owlCarousel({
       nav: true,
       items: 1,
       loop: false,
-      dots: true,
-      navText: ["<img src='img/slider__arrow_prev.png'>", "<img src='img/slider__arrow_next.png'>"],
+      dots: false,
+      smartSpeed: 800,
+      navText: ["<svg width='7' height='12' viewBox='0 0 7 12' xmlns='http://www.w3.org/2000/svg'><path d='M6 1L1 6L6 11' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>", "<svg width='7' height='12' viewBox='0 0 7 12' xmlns='http://www.w3.org/2000/svg'><path d='M1 11L6 6L0.999999 1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>"],
+      // responsive : {
+      //   0   : {
+      //       items: 1
+      //   },
+      //   380 : {
+      //       items: 1
+      //   },
+      //   480 : {
+      //       items: 1
+      //   },
+      //   768 : {
+      //       items: 3
+      //   },
+      //   1040 : {
+      //       items: 4
+      //   }
+      // }
+  });
+  $('.hit__in').owlCarousel({
+      nav: true,
+      loop: false,
+      dots: false,
+      smartSpeed: 800,
+      margin: 30,
+      navText: ["<svg width='7' height='12' viewBox='0 0 7 12' xmlns='http://www.w3.org/2000/svg'><path d='M6 1L1 6L6 11' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>", "<svg width='7' height='12' viewBox='0 0 7 12' xmlns='http://www.w3.org/2000/svg'><path d='M1 11L6 6L0.999999 1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>"],
       responsive : {
         0   : {
             items: 1
@@ -22,8 +48,8 @@ $(function() {
             items: 4
         }
       }
-	});
-	// tabs 
+  });
+  // tabs 
   if ( $(window).width() > 600 ) {
     $(document).ready(function () {
       $(".tabs__content-item:not(:first-child)").hide();
