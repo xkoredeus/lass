@@ -1398,3 +1398,195 @@ input[type="number"] {
       -ms-transform: translate(3%, 3%);
           transform: translate(3%, 3%);
 }
+
+.trust__item {
+  width: 210px;
+  height: 110px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.trust__item::before {
+  content: '';
+  position: absolute;
+  width: 95%;
+  height: 95%;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #B1B1B1;
+  border-radius: 3px;
+}
+
+.trust__item-in {
+  width: 95%;
+  height: 95%;
+  background-color: #F4F4F4;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-transition: .4s all ease;
+  -o-transition: .4s all ease;
+  transition: .4s all ease;
+}
+
+.trust__item-img {
+  width: 134px;
+  height: 76px;
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.trust__item:hover .trust__item-in {
+  -webkit-transform: translate(5%, 5%);
+      -ms-transform: translate(5%, 5%);
+          transform: translate(5%, 5%);
+}
+
+.ben__in {
+  background-color: #F4F4F4;
+}
+
+.ben__container {
+  position: relative;
+}
+
+.ben__container::before {
+  content: '';
+  position: absolute;
+  width: -webkit-calc(100% - 40px);
+  width: calc(100% - 40px);
+  height: 20px;
+  left: 20px;
+  bottom: -10px;
+  border: 1px solid #dfdfdf;
+  border-radius: 3px;
+}
+
+.ben__container > .row {
+  position: relative;
+}
+
+.ben__item {
+  position: relative;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 40px 30px;
+  overflow: hidden;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  min-height: 330px;
+}
+
+.ben__item::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-color: #F4F4F4;
+  border: 1px solid #dfdfdf;
+  -webkit-transition: .4s all ease;
+  -o-transition: .4s all ease;
+  transition: .4s all ease;
+}
+
+.ben__item > * {
+  position: relative;
+  -webkit-transition: .4s all ease;
+  -o-transition: .4s all ease;
+  transition: .4s all ease;
+}
+
+.ben__item-icon {
+  background-position: 50% 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: 35px 35px;
+}
+
+.ben__item-icon-wrp {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.ben__item:hover {
+  color: #fff;
+}
+
+.ben__item:hover::before {
+  background-color: #F39C12;
+  opacity: .8;
+}
+
+.sale__more {
+  position: relative;
+  text-decoration: underline;
+  margin-bottom: 7px;
+  margin-left: 40px;
+}
+
+.sale__more::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  top: 0;
+  left: -20px;
+  background-color: #3B3B3B;
+  opacity: .3;
+}
+
+.sale__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sale__item-img {
+  width: 100%;
+  height: 213px;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
