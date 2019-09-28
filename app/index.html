@@ -12,34 +12,89 @@
 </head>
 <body>
   <header class="header">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-xl-10">
-          <nav class="d-flex justify-content-between">
-            <a href="#" class="header__nav-link">Каталог</a>
-            <a href="#" class="header__nav-link">Доставка</a>
-            <a href="#" class="header__nav-link">Способы оплаты</a>
-            <a href="#" class="header__nav-link">Гарантийные обязательства</a>
-            <a href="#" class="header__nav-link">Качество</a>
-            <a href="#" class="header__nav-link">Отзывы</a>
-            <a href="#" class="header__nav-link">О нас</a>
-            <a href="#" class="header__nav-link">Контакты</a>
-          </nav>
+    <div class="d-none d-xl-block">
+      <div class="container d-none d-xl-block">
+        <div class="row align-items-center">
+          <div class="col-xl-10">
+            <nav class="d-flex justify-content-between">
+              <a href="#" class="header__nav-link">Каталог</a>
+              <a href="#" class="header__nav-link">Доставка</a>
+              <a href="#" class="header__nav-link">Способы оплаты</a>
+              <a href="#" class="header__nav-link">Гарантийные обязательства</a>
+              <a href="#" class="header__nav-link">Качество</a>
+              <a href="#" class="header__nav-link">Отзывы</a>
+              <a href="#" class="header__nav-link">О нас</a>
+              <a href="#" class="header__nav-link">Контакты</a>
+            </nav>
+          </div>
+          <div class="col-xl-2">
+            <a href="#" class="d-flex justify-content-end align-items-center">
+              <div class="header__cart mr-4">
+                <div class="header__cart-svg">
+                  <svg width="24" height="23" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7 21C7 19.8954 7.89543 19 9 19C10.1046 19 11 19.8954 11 21C11 22.1046 10.1046 23 9 23C7.89543 23 7 22.1046 7 21Z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H5C5.47663 0 5.88702 0.336414 5.98056 0.803772L6.82043 5H23C23.298 5 23.5805 5.13292 23.7705 5.36255C23.9605 5.59218 24.0381 5.89457 23.9823 6.18732L22.3809 14.5848C22.2437 15.2754 21.868 15.8958 21.3195 16.3373C20.7738 16.7766 20.0916 17.011 19.3914 17H9.68866C8.98839 17.011 8.30619 16.7766 7.76047 16.3373C7.21224 15.896 6.83665 15.2759 6.69934 14.5857L5.02881 6.2392C5.02203 6.21159 5.01639 6.18355 5.01196 6.15509L4.18033 2H1C0.447715 2 0 1.55228 0 1ZM7.22073 7L8.66086 14.1952C8.70658 14.4254 8.8318 14.6322 9.01462 14.7794C9.19744 14.9265 9.42621 15.0047 9.66086 15.0002L9.67999 15H19.4L19.4192 15.0002C19.6538 15.0047 19.8826 14.9265 20.0654 14.7794C20.2474 14.6329 20.3723 14.4273 20.4185 14.1984L21.7913 7H7.22073Z" />
+                  </svg>
+                </div>
+                <div class="header__cart-val">200</div>
+              </div>
+              <div class="header__cart-price">1 000 450 Р</div>
+            </a>
+          </div>
         </div>
-        <div class="col-xl-2">
-          <a href="#" class="d-flex justify-content-end align-items-center">
-            <div class="header__cart mr-4">
-              <div class="header__cart-svg">
-                <svg width="24" height="23" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M7 21C7 19.8954 7.89543 19 9 19C10.1046 19 11 19.8954 11 21C11 22.1046 10.1046 23 9 23C7.89543 23 7 22.1046 7 21Z" />
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z" />
-                  <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H5C5.47663 0 5.88702 0.336414 5.98056 0.803772L6.82043 5H23C23.298 5 23.5805 5.13292 23.7705 5.36255C23.9605 5.59218 24.0381 5.89457 23.9823 6.18732L22.3809 14.5848C22.2437 15.2754 21.868 15.8958 21.3195 16.3373C20.7738 16.7766 20.0916 17.011 19.3914 17H9.68866C8.98839 17.011 8.30619 16.7766 7.76047 16.3373C7.21224 15.896 6.83665 15.2759 6.69934 14.5857L5.02881 6.2392C5.02203 6.21159 5.01639 6.18355 5.01196 6.15509L4.18033 2H1C0.447715 2 0 1.55228 0 1ZM7.22073 7L8.66086 14.1952C8.70658 14.4254 8.8318 14.6322 9.01462 14.7794C9.19744 14.9265 9.42621 15.0047 9.66086 15.0002L9.67999 15H19.4L19.4192 15.0002C19.6538 15.0047 19.8826 14.9265 20.0654 14.7794C20.2474 14.6329 20.3723 14.4273 20.4185 14.1984L21.7913 7H7.22073Z" />
+      </div>
+    </div>
+    <!--mobile header -->
+    <div class="header_mob d-xl-none">
+      <div class="container">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="d-flex align-items-center mr-3">
+            <a href="#menu" class="header_mob__hamb mr-3">
+              <div class="header_mob__hamb-img header_mob__hamb-img_1">
+                <svg width="23" height="20" viewBox="0 0 20 16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0 0H20V2H0V0Z"/>
+                  <path d="M0 7H20V9H0V7Z"/>
+                  <path d="M0 14H20V16H0V14Z"/>
                 </svg>
               </div>
-              <div class="header__cart-val">200</div>
-            </div>
-            <div class="header__cart-price">1 000 450 Р</div>
-          </a>
+              <div class="header_mob__hamb-img header_mob__hamb-img_2">
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.41421 0L15.5563 14.1421L14.1421 15.5563L0 1.41421L1.41421 0Z"/>
+                  <path d="M3.57628e-07 14.1421L14.1421 2.38419e-07L15.5563 1.41421L1.41421 15.5563L3.57628e-07 14.1421Z"/>
+                </svg>
+
+              </div>
+            </a>
+            <a href="#" class="header_mob__logo">
+              <img src="img/main-logo.png" alt="main-logo.png" class="img-fluid">
+            </a>
+          </div>
+          <div class="d-flex align-items-center">
+            <a href="#search" class="header_mob__search-btn mr-3">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M9 2C5.13401 2 2 5.13401 2 9C2 12.866 5.13401 16 9 16C12.866 16 16 12.866 16 9C16 5.13401 12.866 2 9 2ZM0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9C18 13.9706 13.9706 18 9 18C4.02944 18 0 13.9706 0 9Z"/>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9429 13.9429C14.3334 13.5523 14.9666 13.5523 15.3571 13.9429L19.7071 18.2929C20.0976 18.6834 20.0976 19.3166 19.7071 19.7071C19.3166 20.0976 18.6834 20.0976 18.2929 19.7071L13.9429 15.3571C13.5524 14.9666 13.5524 14.3334 13.9429 13.9429Z" />
+              </svg>
+            </a>
+            <a href="#" class="d-flex justify-content-end align-items-center">
+              <div class="header__cart mr-4">
+                <div class="header__cart-svg">
+                  <svg width="20" height="20" viewBox="0 0 24 23" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7 21C7 19.8954 7.89543 19 9 19C10.1046 19 11 19.8954 11 21C11 22.1046 10.1046 23 9 23C7.89543 23 7 22.1046 7 21Z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18 21C18 19.8954 18.8954 19 20 19C21.1046 19 22 19.8954 22 21C22 22.1046 21.1046 23 20 23C18.8954 23 18 22.1046 18 21Z" />
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 1C0 0.447715 0.447715 0 1 0H5C5.47663 0 5.88702 0.336414 5.98056 0.803772L6.82043 5H23C23.298 5 23.5805 5.13292 23.7705 5.36255C23.9605 5.59218 24.0381 5.89457 23.9823 6.18732L22.3809 14.5848C22.2437 15.2754 21.868 15.8958 21.3195 16.3373C20.7738 16.7766 20.0916 17.011 19.3914 17H9.68866C8.98839 17.011 8.30619 16.7766 7.76047 16.3373C7.21224 15.896 6.83665 15.2759 6.69934 14.5857L5.02881 6.2392C5.02203 6.21159 5.01639 6.18355 5.01196 6.15509L4.18033 2H1C0.447715 2 0 1.55228 0 1ZM7.22073 7L8.66086 14.1952C8.70658 14.4254 8.8318 14.6322 9.01462 14.7794C9.19744 14.9265 9.42621 15.0047 9.66086 15.0002L9.67999 15H19.4L19.4192 15.0002C19.6538 15.0047 19.8826 14.9265 20.0654 14.7794C20.2474 14.6329 20.3723 14.4273 20.4185 14.1984L21.7913 7H7.22073Z" />
+                  </svg>
+                </div>
+                <div class="header__cart-val">200</div>
+              </div>
+            </a>
+            <a href="tel:84994090548">
+              <svg width="20" height="20" viewBox="0 0 14 14" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11.5975 14C11.5361 14 11.4747 14 11.4134 14C9.44979 13.7565 7.4862 13.0869 5.82942 12.0522C4.29536 11.0783 2.94539 9.73913 1.96359 8.21739C0.85907 6.57391 0.184087 4.62606 0 2.67824C0 2.19128 0.122723 1.70432 0.429534 1.3391C0.736346 0.973883 1.16588 0.73042 1.65678 0.66955C1.71814 0.66955 1.77951 0.66955 1.84087 0.66955H3.68174C4.60217 0.66955 5.39988 1.3391 5.52261 2.25214C5.58397 2.79997 5.70669 3.34782 5.89077 3.83477C6.13622 4.50434 5.95214 5.23478 5.46124 5.78261L5.03171 6.20867C5.76805 7.30432 6.68849 8.27825 7.85437 9.00869L8.28391 8.58259C8.77481 8.09564 9.57251 7.91302 10.2475 8.1565C10.7384 8.33911 11.2907 8.46087 11.8429 8.52174C12.7634 8.64348 13.4383 9.43478 13.4383 10.3478V12.1739C13.4383 12.6609 13.2543 13.1478 12.8861 13.4522C12.5179 13.7565 12.0884 14 11.5975 14ZM3.68174 1.88694H1.84087C1.65678 1.88694 1.47269 2.0087 1.34997 2.13043C1.28861 2.25217 1.22725 2.37388 1.22725 2.55649C1.41133 4.32171 2.02495 6.02606 3.00675 7.5478C3.92718 8.9478 5.09306 10.1652 6.5044 11.0174C8.03845 11.9913 9.75661 12.6 11.5361 12.7826C11.7816 12.7826 11.9043 12.7217 12.027 12.6C12.1497 12.4782 12.2111 12.3565 12.2111 12.1739V10.3478C12.2111 10.0435 11.9656 9.8 11.6588 9.73913C11.0452 9.67826 10.4316 9.49562 9.81797 9.25214C9.57252 9.19127 9.32706 9.19128 9.14298 9.37389L8.34527 10.1652C8.16118 10.3478 7.85437 10.4087 7.60892 10.2869C5.95214 9.37389 4.60217 8.03478 3.68174 6.3913C3.62037 6.14783 3.68174 5.84347 3.86583 5.66086L4.66353 4.86957C4.78625 4.74783 4.84762 4.44348 4.78626 4.26087C4.54081 3.65217 4.41808 3.04348 4.29536 2.43478C4.29536 2.13043 3.98855 1.88694 3.68174 1.88694ZM10.9838 6.14781C10.677 6.14781 10.4316 5.96521 10.3702 5.66086C10.1861 4.68695 9.38843 3.95651 8.40663 3.71303C8.09982 3.65216 7.85437 3.3478 7.91573 2.98259C7.97709 2.67824 8.2839 2.43477 8.65208 2.49564C10.1248 2.79998 11.2907 3.89564 11.5361 5.35651C11.5975 5.66086 11.4134 6.02609 11.0452 6.08696C11.0452 6.08696 11.0452 6.14781 10.9838 6.14781ZM13.4383 6.08696C13.1315 6.08696 12.8861 5.84346 12.8247 5.53912C12.5793 3.28694 10.7998 1.52174 8.468 1.21739C8.16119 1.15652 7.91573 0.852152 7.91573 0.547804C7.91573 0.243456 8.28391 0 8.59072 0C11.4747 0.304348 13.6838 2.49564 13.9906 5.35651C14.052 5.66086 13.8065 5.96519 13.4383 6.02606C13.4997 6.08693 13.4383 6.08696 13.4383 6.08696Z"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -48,14 +103,14 @@
     <div class="container">
       <div class="banner__info">
         <div class="row">
-          <div class="col-xl-2">
+          <div class="col-xl-2 tac">
             <a href="#" class="w-100">
               <img src="img/main-logo.png" alt="main-logo.png" class="banner__logo img-fluid">
             </a>
           </div>
-          <div class="col-xl-3">
+          <div class="col-xl-3 d-none d-xl-block">
             <div class="d-flex flex-column justify-content-between banner__info-col">
-              <a href="mailto:info@lass-print.ru" class="d-flex align-items-center wt mb-3">
+              <a href="mailto:info@lass-print.ru" class="d-flex align-items-center wt mb-2">
                 <svg width="13" height="11" viewBox="0 0 13 11" class="banner__icon mr-2" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M1.77276 1.22222C1.44911 1.22222 1.18186 1.49862 1.18186 1.83333V9.16667C1.18186 9.50138 1.44911 9.77778 1.77276 9.77778H11.2272C11.5509 9.77778 11.8181 9.50138 11.8181 9.16667V1.83333C11.8181 1.49862 11.5509 1.22222 11.2272 1.22222H1.77276ZM4.83456e-05 1.83333C4.83456e-05 0.823604 0.796419 0 1.77276 0H11.2272C12.2036 0 12.9999 0.823604 12.9999 1.83333V9.16667C12.9999 10.1764 12.2036 11 11.2272 11H1.77276C0.796419 11 4.83456e-05 10.1764 4.83456e-05 9.16667V1.83333Z"/>
                   <path fill-rule="evenodd" clip-rule="evenodd" d="M0.106867 1.48287C0.294015 1.20637 0.662465 1.13915 0.92982 1.3327L6.5 5.36516L12.0702 1.3327C12.3375 1.13915 12.706 1.20637 12.8931 1.48287C13.0803 1.75937 13.0153 2.14042 12.7479 2.33396L6.83886 6.61174C6.6354 6.75903 6.3646 6.75903 6.16114 6.61174L0.252095 2.33396C-0.0152591 2.14042 -0.0802813 1.75937 0.106867 1.48287Z"/>
@@ -72,7 +127,7 @@
               <div class="banner__info-border"></div>
             </div>
           </div>
-          <div class="col-xl-4">
+          <div class="col-xl-4 d-none d-xl-block">
             <div class="d-flex flex-column justify-content-between banner__info-col pl-3">
               <div class="d-flex align-items-start mb-2 pl">
                 <svg width="14" height="14" viewBox="0 0 14 14" class="banner__icon mt-2 mr-2" xmlns="http://www.w3.org/2000/svg">
@@ -93,7 +148,7 @@
               </div>
             </div>
           </div>
-          <div class="col-xl-3">
+          <div class="col-xl-3 d-none d-xl-block">
             <div class="d-flex flex-column justify-content-between banner__info-col">
               <a href="#popup_call" class="btn banner__btn w-100">Заказать звонок</a>
               <div class="tac lgr">Звонок по России бесплатный</div>
@@ -101,35 +156,35 @@
           </div>
         </div>
       </div>
-      <div class="banner__ttl tac mt-5">Только новые картриджи заводского производства — для тех, кто ценит своё время</div>
-      <form action="" class="banner__search mt-5 mb-5">
+      <div class="banner__ttl tac mt-3 mt-xl-5">Только новые картриджи заводского производства — для тех, кто ценит своё время</div>
+      <form action="" class="banner__search mt-5 mb-5 d-none d-xl-block">
         <input type="text" class="banner__search-input" placeholder="Xerox Phaser 3010">
         <input type="submit" class="banner__search-btn" value="" title="Нажмите для поиска">
       </form>
-      <div class="row">
-        <div class="col-xl-3">
-          <div class="banner__test">
+      <div class="banner__test-list row mt-4 mt-xl-0">
+        <div class="banner__test-item-wrp col-xl-3">
+          <div class="banner__test-item">
             <div class="banner__test-icon" style="background-image: url(img/banner__test_1.svg)"></div>
             <div class="banner__test-ttl">на 50-70% дешевле</div>
             <div>так называемых «оригинальных» аналогов</div>
           </div>
         </div>
-        <div class="col-xl-3">
-          <div class="banner__test">
+        <div class="banner__test-item-wrp col-xl-3">
+          <div class="banner__test-item">
             <div class="banner__test-icon" style="background-image: url(img/banner__test_2.svg)"></div>
             <div class="banner__test-ttl">100% новые</div>
             <div>картриджи заводского производства</div>
           </div>
         </div>
-        <div class="col-xl-3">
-          <div class="banner__test">
+        <div class="banner__test-item-wrp col-xl-3">
+          <div class="banner__test-item">
             <div class="banner__test-icon" style="background-image: url(img/banner__test_3.svg)"></div>
             <div class="banner__test-ttl">5 лет гарантии </div>
             <div>поменяем или вернем 120% от стоимости брака</div>
           </div>
         </div>
-        <div class="col-xl-3">
-          <div class="banner__test">
+        <div class="banner__test-item-wrp col-xl-3">
+          <div class="banner__test-item">
             <div class="banner__test-icon" style="background-image: url(img/banner__test_4.svg)"></div>
             <div class="banner__test-ttl">24 часа в сутки</div>
             <div>на связи — ответим в удобное вам время</div>
@@ -141,9 +196,9 @@
   <section class="section_inner section_dec">
     <div class="container">
       <form class="fil">
-        <div class="fz22 tac mb-4 b upp">Подобрать картриж</div>
-        <div class="row mb-4">
-          <div class="col-xl-4">
+        <div class="fz22 tac mb-4 b upp">Подобрать картридж</div>
+        <div class="row mb-2 mb-xl-4">
+          <div class="col-xl-4 mb-2 mb-xl-0">
             <div class="select__wrp">
               <select>
                 <option value="Выбрать бренд">Выбрать бренд</option>
@@ -153,7 +208,7 @@
               </select>
             </div>
           </div>
-          <div class="col-xl-4">
+          <div class="col-xl-4 mb-2 mb-xl-0">
             <div class="select__wrp">
               <select>
                 <option value="Выбрать бренд">Выбрать серию</option>
@@ -163,7 +218,7 @@
               </select>
             </div>
           </div>
-          <div class="col-xl-4">
+          <div class="col-xl-4 mb-2 mb-xl-0">
             <div class="select__wrp">
               <select>
                 <option value="Выбрать бренд">Выбрать принтер</option>
@@ -185,7 +240,7 @@
   </section>
   <section class="section_inner section_dec">
     <div class="container">
-      <div class="fil-nav d-flex flex-wrap justify-content-between">
+      <div class="fil-nav d-none d-xl-flex flex-wrap justify-content-between">
         <a href="#" class="fil-nav__link">BROTHER</a>
         <a href="#" class="fil-nav__link">CANON</a>
         <a href="#" class="fil-nav__link">EPSON</a>
@@ -307,12 +362,12 @@
       <div class="hit__in owl-carousel mb-5">
         <!--item-->
         <form class="hit__item">
-          <a href="#" class="hit__item-top mb-3">
+          <a href="#" class="hit__item-top mb-2">
             <div class="hit__item-top-in">
               <div class="hit__item-top-img" style="background-image: url(img/hit__item-img_1.jpg)"></div>
             </div>
           </a>
-          <a href="#" class="fz18 b mb-3">Картридж Samsung Ink-M40 4х черный</a>
+          <a href="#" class="fz18 b mb-2">Картридж Samsung Ink-M40 4х черный</a>
           <div class="d-flex justify-content-between align-items-center w-100">
             <button type="submit" class="btn_submit">
               <span class="btn_submit__price"><span>2330 Р</span></span>
@@ -330,12 +385,12 @@
         <!--item-->
         <!--item-->
         <form class="hit__item">
-          <a href="#" class="hit__item-top mb-3">
+          <a href="#" class="hit__item-top mb-2">
             <div class="hit__item-top-in">
               <div class="hit__item-top-img" style="background-image: url(img/hit__item-img_1.jpg)"></div>
             </div>
           </a>
-          <a href="#" class="fz18 b mb-3">Картридж Samsung Ink-M40 4х черный</a>
+          <a href="#" class="fz18 b mb-2">Картридж Samsung Ink-M40 4х черный</a>
           <div class="d-flex justify-content-between align-items-center w-100">
             <button type="submit" class="btn_submit">
               <span class="btn_submit__price"><span>2330 Р</span></span>
@@ -353,12 +408,12 @@
         <!--item-->
         <!--item-->
         <form class="hit__item">
-          <a href="#" class="hit__item-top mb-3">
+          <a href="#" class="hit__item-top mb-2">
             <div class="hit__item-top-in">
               <div class="hit__item-top-img" style="background-image: url(img/hit__item-img_1.jpg)"></div>
             </div>
           </a>
-          <a href="#" class="fz18 b mb-3">Картридж Samsung Ink-M40 4х черный</a>
+          <a href="#" class="fz18 b mb-2">Картридж Samsung Ink-M40 4х черный</a>
           <div class="d-flex justify-content-between align-items-center w-100">
             <button type="submit" class="btn_submit">
               <span class="btn_submit__price"><span>2330 Р</span></span>
@@ -376,12 +431,12 @@
         <!--item-->
         <!--item-->
         <form class="hit__item">
-          <a href="#" class="hit__item-top mb-3">
+          <a href="#" class="hit__item-top mb-2">
             <div class="hit__item-top-in">
               <div class="hit__item-top-img" style="background-image: url(img/hit__item-img_1.jpg)"></div>
             </div>
           </a>
-          <a href="#" class="fz18 b mb-3">Картридж Samsung Ink-M40 4х черный</a>
+          <a href="#" class="fz18 b mb-2">Картридж Samsung Ink-M40 4х черный</a>
           <div class="d-flex justify-content-between align-items-center w-100">
             <button type="submit" class="btn_submit">
               <span class="btn_submit__price"><span>2330 Р</span></span>
@@ -399,12 +454,12 @@
         <!--item-->
         <!--item-->
         <form class="hit__item">
-          <a href="#" class="hit__item-top mb-3">
+          <a href="#" class="hit__item-top mb-2">
             <div class="hit__item-top-in">
               <div class="hit__item-top-img" style="background-image: url(img/hit__item-img_1.jpg)"></div>
             </div>
           </a>
-          <a href="#" class="fz18 b mb-3">Картридж Samsung Ink-M40 4х черный</a>
+          <a href="#" class="fz18 b mb-2">Картридж Samsung Ink-M40 4х черный</a>
           <div class="d-flex justify-content-between align-items-center w-100">
             <button type="submit" class="btn_submit">
               <span class="btn_submit__price"><span>2330 Р</span></span>
@@ -422,12 +477,12 @@
         <!--item-->
         <!--item-->
         <form class="hit__item">
-          <a href="#" class="hit__item-top mb-3">
+          <a href="#" class="hit__item-top mb-2">
             <div class="hit__item-top-in">
               <div class="hit__item-top-img" style="background-image: url(img/hit__item-img_1.jpg)"></div>
             </div>
           </a>
-          <a href="#" class="fz18 b mb-3">Картридж Samsung Ink-M40 4х черный</a>
+          <a href="#" class="fz18 b mb-2">Картридж Samsung Ink-M40 4х черный</a>
           <div class="d-flex justify-content-between align-items-center w-100">
             <button type="submit" class="btn_submit">
               <span class="btn_submit__price"><span>2330 Р</span></span>
@@ -452,11 +507,11 @@
   <section class="section_inner">
     <div class="container">
       <div class="section__ttl">КАРТРИДЖИ ЗАВОДСКОГО ПРОИЗВОДСТВА В МОСКВЕ</div>
-      <div class="row">
-        <div class="col-xl-4">
+      <div class="test__list row">
+        <div class="test__item-wrp col-xl-4">
           <div class="test__item tac">
             <div class="test__item-in" style="background-image: url(img/test__bg_1.jpg)">
-              <div class="test__item-icon-wrp mb-3">
+              <div class="test__item-icon-wrp mb-2">
                 <div class="test__item-icon" style="background-image: url(img/test__img_1.svg)"></div>
               </div>
               <div class="b">Мы поставляем только абсолютно новые (не восстановленные) картриджи заводского производства.</div>
@@ -464,10 +519,10 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-4">
+        <div class="test__item-wrp col-xl-4">
           <div class="test__item tac">
             <div class="test__item-in" style="background-image: url(img/test__bg_2.jpg)">
-              <div class="test__item-icon-wrp mb-3">
+              <div class="test__item-icon-wrp mb-2">
                 <div class="test__item-icon" style="background-image: url(img/test__img_2.svg)"></div>
               </div>
               <div class="b">В нашем ассортименте более 800 моделей картриджей для принтеров и МФУ всех известных мировых брендов,</div>
@@ -475,10 +530,10 @@
             </div>
           </div>
         </div>
-        <div class="col-xl-4">
+        <div class="test__item-wrp col-xl-4">
           <div class="test__item tac">
             <div class="test__item-in" style="background-image: url(img/test__bg_3.jpg)">
-              <div class="test__item-icon-wrp mb-3">
+              <div class="test__item-icon-wrp mb-2">
                 <div class="test__item-icon" style="background-image: url(img/test__img_3.svg)"></div>
               </div>
               <div class="b">На каждый проданный картридж мы даём 5-летнюю гарантию.</div>
@@ -492,7 +547,7 @@
   <section class="section_inner">
     <div class="container">
       <div class="section__ttl tal">Нам доверяют</div>
-      <div class="d-flex flex-wrap justify-content-between">
+      <div class="trust__list d-flex flex-wrap justify-content-between">
         <div class="trust__item">
           <div class="trust__item-in">
             <div class="trust__item-img" style="background-image: url(img/trust_img_1.png)"></div>
@@ -524,31 +579,31 @@
   <div class="section section_inner section_dec pt-0">
     <div class="ben__in">
       <div class="container ben__container">
-        <div class="row no-gutters">
-          <div class="col-xl-4">
+        <div class="ben__list row no-gutters">
+          <div class="ben__item-wrp col-xl-4">
             <div class="ben__item tac" style="background-image: url(img/ben__bg_1.jpg)">
-              <div class="ben__item-icon-wrp mb-3">
+              <div class="ben__item-icon-wrp mb-2">
                 <div class="ben__item-icon" style="background-image: url(img/ben__img_1.svg)"></div>
               </div>
-              <div class="ben__item-ttl fz18 b upp mb-3">ОПЛАТА ПО ФАКТУ</div>
+              <div class="ben__item-ttl fz18 b upp mb-2">ОПЛАТА ПО ФАКТУ</div>
               <div>Вы можете проверить любой из привезённых картриджей и только потом отдать деньги курьеру</div>
             </div>
           </div>
-          <div class="col-xl-4">
+          <div class="ben__item-wrp col-xl-4">
             <div class="ben__item tac" style="background-image: url(img/ben__bg_1.jpg)">
-              <div class="ben__item-icon-wrp mb-3">
+              <div class="ben__item-icon-wrp mb-2">
                 <div class="ben__item-icon" style="background-image: url(img/ben__img_2.svg)"></div>
               </div>
-              <div class="ben__item-ttl fz18 b upp mb-3">БЕСПЛАТНАЯ ДОСТАВКА</div>
+              <div class="ben__item-ttl fz18 b upp mb-2">БЕСПЛАТНАЯ ДОСТАВКА</div>
               <div>Если вы в Москве и успели сделать заказ до 9 часов утра — мы привезем его в тот же день!</div>
             </div>
           </div>
-          <div class="col-xl-4">
+          <div class="ben__item-wrp col-xl-4">
             <div class="ben__item tac" style="background-image: url(img/ben__bg_1.jpg)">
-              <div class="ben__item-icon-wrp mb-3">
+              <div class="ben__item-icon-wrp mb-2">
                 <div class="ben__item-icon" style="background-image: url(img/ben__img_3.svg)"></div>
               </div>
-              <div class="ben__item-ttl fz18 b upp mb-3">ОТСРОЧКА ПЛАТЕЖЕЙ</div>
+              <div class="ben__item-ttl fz18 b upp mb-2">ОТСРОЧКА ПЛАТЕЖЕЙ</div>
               <div>Если работаете по безналичному расчету — отсрочка будет доступна для вас уже со второго заказа.</div>
             </div>
           </div>
@@ -558,19 +613,335 @@
   </div>
   <section class="section_inner">
     <div class="container">
-      <div class="d-flex align-items-end mb-5">
+      <div class="d-flex flex-column flex-xl-row align-items-xl-end mb-4 mb-xl-5">
         <div class="section__ttl tal mb-0">Свежие акции</div>
         <a href="#" class="sale__more">Полезные статьи</a>
       </div>
-      <div class="sale__in">
+      <div class="sale__in owl-carousel">
         <div class="sale__item">
-          <div class="sale__item-img mb-3" style="background-image: url(img/sale__img_1.jpg)"></div>
+          <div class="sale__item-img mb-2" style="background-image: url(img/sale__img_1.jpg)"></div>
           <a href="#" class="b mb-4">Скидка при заказе от 2-х картриджей!</a>
           <div>Акция распространяется на все модели картриджей, при заказе от 2-х штук. Размер скидки зависит от стоимости конкретной модели.</div>
+        </div>
+        <div class="sale__item">
+          <div class="sale__item-img mb-2" style="background-image: url(img/sale__img_2.jpg)"></div>
+          <a href="#" class="b mb-4">Бесплатная доставка по Москве!</a>
+          <div>Доставка по Москве — бесплатно, даже при покупке одного картриджа! Доставка товаров по московскому региону осуществляет наша собственная курьерская служба.</div>
+        </div>
+        <div class="sale__item">
+          <div class="sale__item-img mb-2" style="background-image: url(img/sale__img_1.jpg)"></div>
+          <a href="#" class="b mb-4">Скидка при заказе от 2-х картриджей!</a>
+          <div>Акция распространяется на все модели картриджей, при заказе от 2-х штук. Размер скидки зависит от стоимости конкретной модели.</div>
+        </div>
+        <div class="sale__item">
+          <div class="sale__item-img mb-2" style="background-image: url(img/sale__img_2.jpg)"></div>
+          <a href="#" class="b mb-4">Бесплатная доставка по Москве!</a>
+          <div>Доставка по Москве — бесплатно, даже при покупке одного картриджа! Доставка товаров по московскому региону осуществляет наша собственная курьерская служба.</div>
         </div>
       </div>
     </div>
   </section>
+  <section class="section_inner feed">
+    <div class="container feed__container">
+      <div class="row">
+        <div class="col-xl-10">
+          <form action="" class="feed__form">
+            <div class="section__ttl tal">ТРУДНОСТИ С ВЫБОРОМ? ЗАДАЙТЕ ВОПРОС!</div>
+            <div class="row">
+              <div class="col-xl-4 mb-2 mb-xl-4">
+                <input type="text" class="w-100" placeholder="Имя*" required="">
+              </div>
+              <div class="col-xl-4 mb-2 mb-xl-4">
+                <input type="email" class="w-100" placeholder="E-mail*" required="">
+              </div>
+              <div class="col-xl-4 mb-2 mb-xl-4">
+                <input type="tel" class="w-100" placeholder="Номер телефона*" required="">
+              </div>
+              <div class="col-12 mb-2 mb-xl-4">
+                <textarea id="" cols="30" rows="5" placeholder="Сообщение" class="w-100"></textarea>
+              </div>
+              <div class="col-12">
+                <input type="submit" class="btn" value="Отправить">
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="feed__img"></div>
+    </div>
+  </section>
+  <section class="section_inner map d-none d-xl-block">
+    <div id="map"></div>
+    <div class="map__cnt d-flex flex-column justify-content-start">
+      <div class="section__ttl tal mb-2">Наши контакты</div>
+      <div class="b mb-2">Офис</div>
+      <div class="mb-2">1-й Кожевнический пер., д. 6, стр. 1, БЦ «Павелецкий»</div>
+      <div class="section__ttl tal mb-2">КАК ДОБРАТЬСЯ</div>
+      <div class="b mb-2">Телефон</div>
+      <a href="tel:74994090548" class="fz22 b wt">+7 (499) 409-05-48</a>
+      <a href="tel:74999911081" class="fz22 b wt mb-2">+7 (499) 991-10-81</a>
+      <div class="b mb-2">Мессенджеры</div>
+      <a href="#" class="d-flex align-items-center wt mb-1">
+        <span class="mess__icon mess__icon_wa mr-2">
+          <svg width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12.1999 9.82499C11.9749 9.67499 10.9999 9.225 10.8499 9.15C10.6249 9.075 10.5499 9 10.3999 9.3C10.2499 9.525 9.8749 9.975 9.7249 10.125C9.5749 10.275 9.4249 10.275 9.2749 10.2C9.0499 10.05 8.4499 9.9 7.6249 9.225C7.0249 8.7 6.6499 8.025 6.4999 7.875C6.3499 7.65 6.4999 7.575 6.5749 7.425C6.6499 7.35 6.7999 7.125 6.8749 7.125C6.9499 6.975 7.0249 6.89999 7.0999 6.82499C7.1749 6.67499 7.1749 6.525 7.0999 6.525C7.0249 6.375 6.6499 5.39999 6.4999 4.94999C6.4249 4.49999 6.1999 4.65 6.0499 4.65C5.8999 4.65 5.7499 4.65 5.5999 4.65C5.4499 4.65 5.2999 4.72499 5.0749 4.94999C4.8499 5.17499 4.3249 5.625 4.3249 6.6C4.3249 7.575 5.0749 8.54999 5.1499 8.69999C5.2999 8.84999 6.6499 10.875 8.5999 11.775C9.0499 12 9.4249 12.075 9.7249 12.225C10.1749 12.375 10.6999 12.375 10.9999 12.3C11.4499 12.225 12.1999 11.85 12.3499 11.325C12.5749 10.875 12.5749 10.5 12.4999 10.35C12.5749 9.9 12.4249 9.82499 12.1999 9.82499ZM8.5249 14.85C7.3249 14.85 6.1249 14.55 5.0749 13.875L4.7749 13.725L2.2249 14.4L2.8999 11.925L2.7499 11.625C2.0749 10.575 1.6999 9.3 1.6999 8.025C1.6999 4.275 4.7749 1.35 8.5249 1.35C10.3249 1.35 12.0499 2.1 13.3249 3.375C14.5999 4.65 15.3499 6.375 15.3499 8.175C15.3499 11.775 12.1999 14.85 8.5249 14.85ZM14.2999 2.32499C12.7249 0.749993 10.6999 0 8.5249 0C4.0249 0 0.349903 3.6 0.349903 8.175C0.349903 9.675 0.799902 11.025 1.3999 12.225L0.274902 16.425L4.5499 15.3C5.7499 15.975 7.0999 16.275 8.5249 16.275C13.0249 16.275 16.6999 12.6 16.6999 8.1C16.6249 5.925 15.8749 3.97499 14.2999 2.32499Z"/>
+          </svg>
+        </span>
+        <span>WhatsApp: +7 (964) 645-05-48</span>
+      </a>
+      <a href="#" class="d-flex align-items-center wt">
+        <span class="mess__icon mess__icon_vi mr-2">
+          <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11 6.87495C10.85 6.87495 10.7 6.72495 10.7 6.57495C10.625 5.44995 10.1 4.84995 8.97495 4.77495C8.82495 4.77495 8.67495 4.62495 8.67495 4.39995C8.67495 4.24995 8.82495 4.09995 9.04995 4.09995C10.475 4.17495 11.3 4.99995 11.375 6.49995C11.375 6.72495 11.225 6.87495 11 6.87495ZM12.725 7.47495C12.875 7.47495 13.025 7.32495 13.025 7.17495C13.025 5.82495 12.65 4.77495 11.825 3.87495C11 2.97495 9.87495 2.44995 8.44995 2.37495C8.29995 2.37495 8.07495 2.52495 8.07495 2.67495C8.07495 2.82495 8.22495 3.04995 8.37495 3.04995C9.64995 3.12495 10.625 3.57495 11.3 4.32495C11.975 5.07495 12.3499 6.04995 12.275 7.17495C12.4249 7.24995 12.575 7.47495 12.725 7.47495ZM14.525 8.14995C14.6749 8.14995 14.825 7.99995 14.825 7.77495C14.825 5.52495 14.15 3.79995 12.8 2.52495C11.45 1.24995 9.79995 0.574951 7.84995 0.574951C7.69995 0.574951 7.54995 0.724949 7.54995 0.874949C7.54995 1.02495 7.69995 1.24995 7.84995 1.24995C9.64995 1.24995 11.15 1.84995 12.35 3.04995C13.55 4.24995 14.15 5.82495 14.15 7.84995C14.2249 7.99995 14.375 8.14995 14.525 8.14995ZM9.04995 11.075C5.59995 10.175 4.62495 6.72495 4.62495 6.72495C4.62495 6.72495 4.54995 6.27495 4.92495 5.97495L5.52495 5.44995C5.82495 5.22495 6.04995 4.62495 5.74995 4.09995C5.59995 3.79995 5.22495 3.19995 4.92495 2.89995C4.62495 2.52495 4.02495 1.77495 4.02495 1.77495C3.72495 1.39995 3.27495 1.32495 2.74995 1.54995C2.29995 1.77495 1.84995 2.14995 1.47495 2.59995C1.17495 2.97495 1.02495 3.27495 0.949951 3.64995C0.949951 3.72495 0.949951 3.72495 0.949951 3.79995C0.949951 3.94995 0.949953 4.09995 1.02495 4.24995C1.17495 4.77495 1.54995 5.67495 2.37495 7.17495C2.89995 8.14995 3.42495 8.89995 3.94995 9.57495C4.24995 9.94995 4.54995 10.325 4.92495 10.7C4.92495 10.7 4.92495 10.7 4.92495 10.775C4.92495 10.775 4.92495 10.775 4.99995 10.775C5.37495 11.15 5.74995 11.45 6.12495 11.75C6.79995 12.275 7.62495 12.8 8.52495 13.325C10.025 14.15 10.85 14.5249 11.45 14.6749C11.6 14.7499 11.75 14.75 11.9 14.75C11.9749 14.75 11.975 14.75 12.05 14.75C12.425 14.675 12.725 14.5249 13.1 14.2249C13.55 13.8499 13.8499 13.4 14.15 12.95C14.375 12.5 14.3 12.0499 13.925 11.6749C13.925 11.6749 13.175 11 12.8 10.775C12.425 10.5499 11.9 10.175 11.6 9.94995C11 9.64995 10.475 9.79995 10.25 10.1749L9.72495 10.775C9.57495 11.075 9.04995 11.075 9.04995 11.075Z"/>
+          </svg>
+        </span>
+        <span>Viber: +7 (964) 645-05-48</span>
+      </a>
+    </div>
+  </section>
+  <footer class="footer section_inner">
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-xl-2">
+          <div class="d-flex flex-column">
+            <div class="b mb-2 fz15 footer__ttl d-flex align-items-center">
+              <span>LASS-PRINT</span>
+              <svg width="7" height="12" viewBox="0 0 7 12" class="footer__ttl-arr" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 1L1 6L6 11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <a href="#" class="wt mb-2 fz15 footer__link">Каталог</a>
+            <a href="#" class="wt mb-2 fz15 footer__link">Доставка</a>
+            <a href="#" class="wt mb-2 fz15 footer__link">Способы </a>
+            <a href="#" class="wt mb-2 fz15 footer__link">Обязательства</a>
+            <a href="#" class="wt mb-2 fz15 footer__link">Качество</a>
+            <a href="#" class="wt mb-2 fz15 footer__link">Отзывы</a>
+            <a href="#" class="wt mb-2 fz15 footer__link">О нас</a>
+            <a href="#" class="wt mb-2 fz15 footer__link">Контакты</a>
+          </div>
+        </div>
+        <div class="col-6 col-xl-5">
+          <div class="d-flex flex-column">
+            <div class="b mb-2 fz15 footer__ttl d-flex align-items-center">
+              <span>БРЕНДЫ</span>
+              <svg width="7" height="12" viewBox="0 0 7 12" class="footer__ttl-arr" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 1L1 6L6 11" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <div class="row mb-xl-3">
+              <div class="col-12 col-xl-5 mb-2 mb-xl-0 footer__link">
+                <a href="#" class="wt fz15">Brother</a>
+              </div>
+              <div class="col-12 col-xl-7 mb-2 mb-xl-0 footer__link">
+                <a href="#" class="wt fz15">Oki</a>
+              </div>
+            </div>
+            <div class="row mb-xl-3">
+              <div class="col-12 col-xl-5 mb-2 mb-xl-0 footer__link">
+                <a href="#" class="wt fz15">Canon</a>
+              </div>
+              <div class="col-12 col-xl-7 mb-2 mb-xl-0 footer__link">
+                <a href="#" class="wt fz15">Panasonic</a>
+              </div>
+            </div>
+            <div class="row mb-xl-3">
+              <div class="col-12 col-xl-5 mb-2 mb-xl-0 footer__link">
+                <a href="#" class="wt fz15">Epson</a>
+              </div>
+              <div class="col-12 col-xl-7 mb-2 mb-xl-0 footer__link">
+                <a href="#" class="wt fz15">Ricoh</a>
+              </div>
+            </div>
+            <div class="row mb-xl-3">
+              <div class="col-12 col-xl-5 mb-2 mb-xl-0 footer__link">
+                <a href="#" class="wt fz15">HP</a>
+              </div>
+              <div class="col-12 col-xl-7 mb-2 mb-xl-0 footer__link">
+                <a href="#" class="wt fz15">Samsung</a>
+              </div>
+            </div>
+            <div class="row mb-xl-3">
+              <div class="col-12 col-xl-5 mb-2 mb-xl-0 footer__link">
+                <a href="#" class="wt fz15">Konica Minolta</a>
+              </div>
+              <div class="col-12 col-xl-7 mb-2 mb-xl-0 footer__link">
+                <a href="#" class="wt fz15">Sharp</a>
+              </div>
+            </div>
+            <div class="row mb-xl-3">
+              <div class="col-12 col-xl-5 mb-2 mb-xl-0 footer__link">
+                <a href="#" class="wt fz15">Kyocera Mita</a>
+              </div>
+              <div class="col-12 col-xl-7 mb-2 mb-xl-0 footer__link">
+                <a href="#" class="wt fz15">Toshiba</a>
+              </div>
+            </div>
+            <div class="row mb-xl-3">
+              <div class="col-12 col-xl-5 mb-2 mb-xl-0 footer__link">
+                <a href="#" class="wt fz15">Lexmark</a>
+              </div>
+              <div class="col-12 col-xl-7 mb-2 mb-xl-0 footer__link">
+                <a href="#" class="wt fz15">Xerox</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-5 mt-3 mt-xl-0">
+          <div class="d-flex flex-column">
+            <div class="b mb-2 upp">Связаться с нами</div>
+            <a href="tel:74994090548" class="fz30 b wt">+7 (499) 409-05-48</a>
+            <a href="tel:74999911081" class="fz30 b wt mb-2">+7 (499) 991-10-81</a>
+            <a href="#" class="d-flex align-items-center wt mb-1">
+              <span class="mess__icon mess__icon_wa mr-2">
+                <svg width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12.1999 9.82499C11.9749 9.67499 10.9999 9.225 10.8499 9.15C10.6249 9.075 10.5499 9 10.3999 9.3C10.2499 9.525 9.8749 9.975 9.7249 10.125C9.5749 10.275 9.4249 10.275 9.2749 10.2C9.0499 10.05 8.4499 9.9 7.6249 9.225C7.0249 8.7 6.6499 8.025 6.4999 7.875C6.3499 7.65 6.4999 7.575 6.5749 7.425C6.6499 7.35 6.7999 7.125 6.8749 7.125C6.9499 6.975 7.0249 6.89999 7.0999 6.82499C7.1749 6.67499 7.1749 6.525 7.0999 6.525C7.0249 6.375 6.6499 5.39999 6.4999 4.94999C6.4249 4.49999 6.1999 4.65 6.0499 4.65C5.8999 4.65 5.7499 4.65 5.5999 4.65C5.4499 4.65 5.2999 4.72499 5.0749 4.94999C4.8499 5.17499 4.3249 5.625 4.3249 6.6C4.3249 7.575 5.0749 8.54999 5.1499 8.69999C5.2999 8.84999 6.6499 10.875 8.5999 11.775C9.0499 12 9.4249 12.075 9.7249 12.225C10.1749 12.375 10.6999 12.375 10.9999 12.3C11.4499 12.225 12.1999 11.85 12.3499 11.325C12.5749 10.875 12.5749 10.5 12.4999 10.35C12.5749 9.9 12.4249 9.82499 12.1999 9.82499ZM8.5249 14.85C7.3249 14.85 6.1249 14.55 5.0749 13.875L4.7749 13.725L2.2249 14.4L2.8999 11.925L2.7499 11.625C2.0749 10.575 1.6999 9.3 1.6999 8.025C1.6999 4.275 4.7749 1.35 8.5249 1.35C10.3249 1.35 12.0499 2.1 13.3249 3.375C14.5999 4.65 15.3499 6.375 15.3499 8.175C15.3499 11.775 12.1999 14.85 8.5249 14.85ZM14.2999 2.32499C12.7249 0.749993 10.6999 0 8.5249 0C4.0249 0 0.349903 3.6 0.349903 8.175C0.349903 9.675 0.799902 11.025 1.3999 12.225L0.274902 16.425L4.5499 15.3C5.7499 15.975 7.0999 16.275 8.5249 16.275C13.0249 16.275 16.6999 12.6 16.6999 8.1C16.6249 5.925 15.8749 3.97499 14.2999 2.32499Z"/>
+                </svg>
+              </span>
+              <span>WhatsApp: +7 (964) 645-05-48</span>
+            </a>
+            <a href="#" class="d-flex align-items-center wt mb-3 mb-xl-5">
+              <span class="mess__icon mess__icon_vi mr-2">
+                <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M11 6.87495C10.85 6.87495 10.7 6.72495 10.7 6.57495C10.625 5.44995 10.1 4.84995 8.97495 4.77495C8.82495 4.77495 8.67495 4.62495 8.67495 4.39995C8.67495 4.24995 8.82495 4.09995 9.04995 4.09995C10.475 4.17495 11.3 4.99995 11.375 6.49995C11.375 6.72495 11.225 6.87495 11 6.87495ZM12.725 7.47495C12.875 7.47495 13.025 7.32495 13.025 7.17495C13.025 5.82495 12.65 4.77495 11.825 3.87495C11 2.97495 9.87495 2.44995 8.44995 2.37495C8.29995 2.37495 8.07495 2.52495 8.07495 2.67495C8.07495 2.82495 8.22495 3.04995 8.37495 3.04995C9.64995 3.12495 10.625 3.57495 11.3 4.32495C11.975 5.07495 12.3499 6.04995 12.275 7.17495C12.4249 7.24995 12.575 7.47495 12.725 7.47495ZM14.525 8.14995C14.6749 8.14995 14.825 7.99995 14.825 7.77495C14.825 5.52495 14.15 3.79995 12.8 2.52495C11.45 1.24995 9.79995 0.574951 7.84995 0.574951C7.69995 0.574951 7.54995 0.724949 7.54995 0.874949C7.54995 1.02495 7.69995 1.24995 7.84995 1.24995C9.64995 1.24995 11.15 1.84995 12.35 3.04995C13.55 4.24995 14.15 5.82495 14.15 7.84995C14.2249 7.99995 14.375 8.14995 14.525 8.14995ZM9.04995 11.075C5.59995 10.175 4.62495 6.72495 4.62495 6.72495C4.62495 6.72495 4.54995 6.27495 4.92495 5.97495L5.52495 5.44995C5.82495 5.22495 6.04995 4.62495 5.74995 4.09995C5.59995 3.79995 5.22495 3.19995 4.92495 2.89995C4.62495 2.52495 4.02495 1.77495 4.02495 1.77495C3.72495 1.39995 3.27495 1.32495 2.74995 1.54995C2.29995 1.77495 1.84995 2.14995 1.47495 2.59995C1.17495 2.97495 1.02495 3.27495 0.949951 3.64995C0.949951 3.72495 0.949951 3.72495 0.949951 3.79995C0.949951 3.94995 0.949953 4.09995 1.02495 4.24995C1.17495 4.77495 1.54995 5.67495 2.37495 7.17495C2.89995 8.14995 3.42495 8.89995 3.94995 9.57495C4.24995 9.94995 4.54995 10.325 4.92495 10.7C4.92495 10.7 4.92495 10.7 4.92495 10.775C4.92495 10.775 4.92495 10.775 4.99995 10.775C5.37495 11.15 5.74995 11.45 6.12495 11.75C6.79995 12.275 7.62495 12.8 8.52495 13.325C10.025 14.15 10.85 14.5249 11.45 14.6749C11.6 14.7499 11.75 14.75 11.9 14.75C11.9749 14.75 11.975 14.75 12.05 14.75C12.425 14.675 12.725 14.5249 13.1 14.2249C13.55 13.8499 13.8499 13.4 14.15 12.95C14.375 12.5 14.3 12.0499 13.925 11.6749C13.925 11.6749 13.175 11 12.8 10.775C12.425 10.5499 11.9 10.175 11.6 9.94995C11 9.64995 10.475 9.79995 10.25 10.1749L9.72495 10.775C9.57495 11.075 9.04995 11.075 9.04995 11.075Z"/>
+                </svg>
+              </span>
+              <span>Viber: +7 (964) 645-05-48</span>
+            </a>
+            <div class="b mb-2">Офис</div>
+            <div class="mb-2">1-й Кожевнический пер., д. 6, стр. 1, БЦ «Павелецкий»</div>
+          </div>
+        </div>
+      </div>
+      <hr class="w-100 mt-4 mb-4">
+      <div class="row align-items-center">
+        <div class="col-xl-2 tac mb-3 mb-xl-0">
+          <a href="#" class="footer__logo">
+            <img src="img/main-logo.png" alt="main-logo.png" class="img-fluid">
+          </a>
+        </div>
+        <div class="col-xl-10 footer__copy">
+          © 2009-2019 Интернет-магазин расходных материалов «ЛассПринт». ИП Ловков А.О. ОГРН 319508100104766. Использование материалов сайта lass-print.ru без письменного разрешения запрещено.
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- preloader-->
+  <div class="preloader">
+    <div class="preloader__icon"></div>
+  </div>
+  <!--/ preloader-->
+  <!--mobile menu v2-->
+  <nav id="menu" class="d-xl-none">
+    <ul>
+      <li>
+        <span>
+          <div class="d-flex align-items-center">
+            <div>Коммерческое предложение</div>
+          </div>
+        </span>
+        <ul>
+          <li><a href="#">Москва</a></li>
+          <li><a href="#">Самара</a></li>
+          <li><a href="#">Псков</a></li>
+        </ul>
+      </li>
+      <li>
+        <span>
+          <a href="#" class="header__cab-link d-flex align-items-center">
+            <div>Авторизация на сайте</div>
+          </a>
+        </span>
+      </li>
+      <li>
+        <a href="#" class="d-flex align-items-center">
+          <div>Контакты</div>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="d-flex align-items-center">
+          <div>Карьера</div>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="d-flex align-items-center">
+          <div>Доставка</div>
+        </a>
+      </li>
+      <li>
+        <a href="#" class="d-flex align-items-center">
+          <div>О компании</div>
+        </a>
+      </li>
+      <li class="pt-3">
+        <span class="d-flex flex-column align-items-start">
+          <div class="b mb-2">Офис</div>
+          <span class="mb-3 w-100">1-й Кожевнический пер., д. 6,<br> стр. 1, БЦ «Павелецкий»</span>
+          <div class="b mb-2">Телефоны</div>
+          <a href="tel:74994090548" class="fz22 b wt mb-1">+7 (499) 409-05-48</a>
+          <a href="tel:74999911081" class="fz22 b wt mb-2">+7 (499) 991-10-81</a>
+          <div class="b mb-2 mt-3">Мессенджеры</div>
+          <a href="#" class="d-flex align-items-center wt mb-1">
+            <span class="mess__icon mess__icon_wa mr-2">
+              <svg width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.1999 9.82499C11.9749 9.67499 10.9999 9.225 10.8499 9.15C10.6249 9.075 10.5499 9 10.3999 9.3C10.2499 9.525 9.8749 9.975 9.7249 10.125C9.5749 10.275 9.4249 10.275 9.2749 10.2C9.0499 10.05 8.4499 9.9 7.6249 9.225C7.0249 8.7 6.6499 8.025 6.4999 7.875C6.3499 7.65 6.4999 7.575 6.5749 7.425C6.6499 7.35 6.7999 7.125 6.8749 7.125C6.9499 6.975 7.0249 6.89999 7.0999 6.82499C7.1749 6.67499 7.1749 6.525 7.0999 6.525C7.0249 6.375 6.6499 5.39999 6.4999 4.94999C6.4249 4.49999 6.1999 4.65 6.0499 4.65C5.8999 4.65 5.7499 4.65 5.5999 4.65C5.4499 4.65 5.2999 4.72499 5.0749 4.94999C4.8499 5.17499 4.3249 5.625 4.3249 6.6C4.3249 7.575 5.0749 8.54999 5.1499 8.69999C5.2999 8.84999 6.6499 10.875 8.5999 11.775C9.0499 12 9.4249 12.075 9.7249 12.225C10.1749 12.375 10.6999 12.375 10.9999 12.3C11.4499 12.225 12.1999 11.85 12.3499 11.325C12.5749 10.875 12.5749 10.5 12.4999 10.35C12.5749 9.9 12.4249 9.82499 12.1999 9.82499ZM8.5249 14.85C7.3249 14.85 6.1249 14.55 5.0749 13.875L4.7749 13.725L2.2249 14.4L2.8999 11.925L2.7499 11.625C2.0749 10.575 1.6999 9.3 1.6999 8.025C1.6999 4.275 4.7749 1.35 8.5249 1.35C10.3249 1.35 12.0499 2.1 13.3249 3.375C14.5999 4.65 15.3499 6.375 15.3499 8.175C15.3499 11.775 12.1999 14.85 8.5249 14.85ZM14.2999 2.32499C12.7249 0.749993 10.6999 0 8.5249 0C4.0249 0 0.349903 3.6 0.349903 8.175C0.349903 9.675 0.799902 11.025 1.3999 12.225L0.274902 16.425L4.5499 15.3C5.7499 15.975 7.0999 16.275 8.5249 16.275C13.0249 16.275 16.6999 12.6 16.6999 8.1C16.6249 5.925 15.8749 3.97499 14.2999 2.32499Z"/>
+              </svg>
+            </span>
+            <span>WhatsApp: +7 (964) 645-05-48</span>
+          </a>
+          <a href="#" class="d-flex align-items-center wt">
+            <span class="mess__icon mess__icon_vi mr-2">
+              <svg width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 6.87495C10.85 6.87495 10.7 6.72495 10.7 6.57495C10.625 5.44995 10.1 4.84995 8.97495 4.77495C8.82495 4.77495 8.67495 4.62495 8.67495 4.39995C8.67495 4.24995 8.82495 4.09995 9.04995 4.09995C10.475 4.17495 11.3 4.99995 11.375 6.49995C11.375 6.72495 11.225 6.87495 11 6.87495ZM12.725 7.47495C12.875 7.47495 13.025 7.32495 13.025 7.17495C13.025 5.82495 12.65 4.77495 11.825 3.87495C11 2.97495 9.87495 2.44995 8.44995 2.37495C8.29995 2.37495 8.07495 2.52495 8.07495 2.67495C8.07495 2.82495 8.22495 3.04995 8.37495 3.04995C9.64995 3.12495 10.625 3.57495 11.3 4.32495C11.975 5.07495 12.3499 6.04995 12.275 7.17495C12.4249 7.24995 12.575 7.47495 12.725 7.47495ZM14.525 8.14995C14.6749 8.14995 14.825 7.99995 14.825 7.77495C14.825 5.52495 14.15 3.79995 12.8 2.52495C11.45 1.24995 9.79995 0.574951 7.84995 0.574951C7.69995 0.574951 7.54995 0.724949 7.54995 0.874949C7.54995 1.02495 7.69995 1.24995 7.84995 1.24995C9.64995 1.24995 11.15 1.84995 12.35 3.04995C13.55 4.24995 14.15 5.82495 14.15 7.84995C14.2249 7.99995 14.375 8.14995 14.525 8.14995ZM9.04995 11.075C5.59995 10.175 4.62495 6.72495 4.62495 6.72495C4.62495 6.72495 4.54995 6.27495 4.92495 5.97495L5.52495 5.44995C5.82495 5.22495 6.04995 4.62495 5.74995 4.09995C5.59995 3.79995 5.22495 3.19995 4.92495 2.89995C4.62495 2.52495 4.02495 1.77495 4.02495 1.77495C3.72495 1.39995 3.27495 1.32495 2.74995 1.54995C2.29995 1.77495 1.84995 2.14995 1.47495 2.59995C1.17495 2.97495 1.02495 3.27495 0.949951 3.64995C0.949951 3.72495 0.949951 3.72495 0.949951 3.79995C0.949951 3.94995 0.949953 4.09995 1.02495 4.24995C1.17495 4.77495 1.54995 5.67495 2.37495 7.17495C2.89995 8.14995 3.42495 8.89995 3.94995 9.57495C4.24995 9.94995 4.54995 10.325 4.92495 10.7C4.92495 10.7 4.92495 10.7 4.92495 10.775C4.92495 10.775 4.92495 10.775 4.99995 10.775C5.37495 11.15 5.74995 11.45 6.12495 11.75C6.79995 12.275 7.62495 12.8 8.52495 13.325C10.025 14.15 10.85 14.5249 11.45 14.6749C11.6 14.7499 11.75 14.75 11.9 14.75C11.9749 14.75 11.975 14.75 12.05 14.75C12.425 14.675 12.725 14.5249 13.1 14.2249C13.55 13.8499 13.8499 13.4 14.15 12.95C14.375 12.5 14.3 12.0499 13.925 11.6749C13.925 11.6749 13.175 11 12.8 10.775C12.425 10.5499 11.9 10.175 11.6 9.94995C11 9.64995 10.475 9.79995 10.25 10.1749L9.72495 10.775C9.57495 11.075 9.04995 11.075 9.04995 11.075Z"/>
+              </svg>
+            </span>
+            <span>Viber: +7 (964) 645-05-48</span>
+          </a>
+        </span>
+      </li>
+    </ul>
+  </nav>
+  <!--/mobile menu v2-->
+  <!--mobile search-->
+  <div class="search_mob d-xl-none">
+    <div class="d-flex justify-content-end mb-3">
+      <a href="#" class="search_mob__close">
+        <svg width="20" height="20" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 2L32 32M2 32L32 2" stroke="#fff" stroke-width="3"/>
+        </svg>
+      </a>
+    </div>
+    <form action="" class="banner__search mb-3 mb-xl-0">
+      <input type="text" class="banner__search-input" placeholder="Xerox Phaser 3010">
+      <input type="submit" class="banner__search-btn" value="" title="Нажмите для поиска">
+    </form>
+    <div class="section__ttl tal">Популярные запросы</div>
+    <div class="d-flex flex-column">
+      <a href="#" class="und wt">Xerox Phaser 301</a>
+      <a href="#" class="und wt">Xerox Phaser 302</a>
+      <a href="#" class="und wt">Xerox Phaser 303</a>
+      <a href="#" class="und wt">Xerox Phaser 304</a>
+      <a href="#" class="und wt">Xerox Phaser 305</a>
+      <a href="#" class="und wt">Xerox Phaser 306</a>
+      <a href="#" class="und wt">Xerox Phaser 307</a>
+      <a href="#" class="und wt">Xerox Phaser 308</a>
+      <a href="#" class="und wt">Xerox Phaser 309</a>
+      <a href="#" class="und wt">Xerox Phaser 3010</a>
+      <a href="#" class="und wt">Xerox Phaser 3011</a>
+      <a href="#" class="und wt">Xerox Phaser 3012</a>
+      <a href="#" class="und wt">Xerox Phaser 3013</a>
+      <a href="#" class="und wt">Xerox Phaser 3014</a>
+      <a href="#" class="und wt">Xerox Phaser 3015</a>
+      <a href="#" class="und wt">Xerox Phaser 3016</a>
+      <a href="#" class="und wt">Xerox Phaser 3017</a>
+      <a href="#" class="und wt">Xerox Phaser 3018</a>
+      <a href="#" class="und wt">Xerox Phaser 3019</a>
+      <a href="#" class="und wt">Xerox Phaser 3020</a>
+      <a href="#" class="und wt">Xerox Phaser 3021</a>
+      <a href="#" class="und wt">Xerox Phaser 3022</a>
+      <a href="#" class="und wt">Xerox Phaser 3023</a>
+    </div>
+  </div>
+  <!--/mobile search-->
   <div id="popup_call" class="popup__container" style="display:none">
     <div  class="popup__wrp popup_call__wrp">
       <form action="[[~[[*id]]]]" method="post" class="popup">
@@ -592,6 +963,8 @@
     </div>
   </div>
   <script src="js/libs.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=078a27eb-0b91-4b81-8ea4-d202061ff355" type="text/javascript"></script>
+  
   <script src="js/scripts.js"></script>
 </body>
 </html>

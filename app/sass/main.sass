@@ -31,7 +31,9 @@ $g-bold: 'GothamPro-Bold'
 @mixin r($width)
   @media only screen and (max-width: $width + "px")
     @content
-
+html
+  &.fixed
+    overflow: hidden
 .preloader
   position: fixed
   left: 0
@@ -50,18 +52,16 @@ $g-bold: 'GothamPro-Bold'
   width: 4em
   height: 4em
   margin: auto
-  fill: none
-  stroke: $dark
-  animation: rotating-plane 3.2s infinite ease-in-out
+  background-color: $yel
+  animation: rotating-plane 1.2s infinite ease-in-out
 @keyframes rotating-plane
   0%
-    transform: rotate(0deg)
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg)
   50%
-    transform: rotate(180deg)
-    // stroke: $green
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
+    background-color: $dark
   100%
-    transform: rotate(360deg)
-    // stroke: $brown
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
 body
   scroll-behavior: smooth
   background-color: #fff
@@ -277,19 +277,34 @@ input[type="number"]
   color: $lgr
 .wt
   color: #fff
+a.wt
+  color: #fff
+  &:hover
+    color: $yel
+.yel
+  color: $yel
+a.yel
+  color: $yel
+  &:hover
+    color: #fff
+.fz30
+  font-size: 30px
 .fz22
   font-size: 22px
 .fz18
   font-size: 18px
+.fz15
+  font-size: 15px
 .btn
   font-size: 16px
   font-family: $g-bold
   color: #fff
   text-align: center
   text-transform: uppercase
-  padding: 12px 30px
+  padding: 12px 40px
   background: $yel
   display: inline-block
+  border: none
   border-radius: 3px
   position: relative
   outline: none
@@ -507,7 +522,7 @@ input[type="number"]
     button.owl-dot
       width: 13px
       height: 13px
-      border: 2.5px solid #fff
+      border: 2.5px solid $yel
       border-radius: 50%
       background-color: transparent
       position: relative
@@ -517,7 +532,7 @@ input[type="number"]
       &.active
         // transform: scale(.8)
         border-color: transparent
-        background-color: #fff
+        background-color: $yel
   .owl-nav
     button.owl-prev,
     button.owl-next
@@ -561,6 +576,8 @@ input[type="number"]
 .section
   &_inner
     padding: 60px 0
+    +r(1200)
+      padding: 30px 0
   &_dec
     position: relative
     &::after
@@ -580,13 +597,16 @@ input[type="number"]
     margin-bottom: 35px
     text-align: center
     text-transform: uppercase
-  &__subttl
-    font-size: 28px
-    font-family: $g-bold
-    letter-spacing: .5px
-    margin-bottom: 35px
-    margin-top: -10px
-    text-align: center
+    +r(1200)
+      font-size: 20px
+      margin-bottom: 20px
+  // &__subttl
+  //   font-size: 28px
+  //   font-family: $g-bold
+  //   letter-spacing: .5px
+  //   margin-bottom: 35px
+  //   margin-top: -10px
+  //   text-align: center
 // .input__wrp
 //   position: relative
 //   max-width: 230px
@@ -611,7 +631,7 @@ input[type="number"]
 //     margin-bottom: 15px
 .header
   background-color: $dark
-  padding: 15px
+  padding: 15px 0
   &__nav
     &-link
       font-size: 15px
@@ -640,9 +660,30 @@ input[type="number"]
       .header__cart
         &-svg
           fill: $yel
+  &_mob
+    &__hamb
+      width: 23px
+      height: 20px
+      position: relative
+      &-img
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        display: flex
+        justify-content: center
+        align-items: center
+        +ease
+        &_2
+          opacity: 0
+          transform: scale(.5)
+    &__logo
+      max-width: 80px
 .banner
   position: relative
   padding: 35px 0
+  +r(1200)
+    padding: 25x 0
   background-image: url('../img/offer__bg.jpg')
   +cv
   &::before
@@ -657,7 +698,7 @@ input[type="number"]
       transform: scale(.9)
   &__info
     &-col
-      min-height: 90px
+      min-height: 98px
       position: relative
     &-border
       position: absolute
@@ -680,6 +721,8 @@ input[type="number"]
     max-width: 910px
     margin-left: auto
     margin-right: auto
+    +r(1200)
+      font-size: 20px
   &__search
     position: relative
     width: 100%
@@ -699,11 +742,14 @@ input[type="number"]
       &:hover
         transform: translateY(-50%) scale(1.05)
   &__test
-    display: flex
-    flex-direction: column
-    align-items: center
-    text-align: center
-    color: #fff
+    &-item
+      display: flex
+      flex-direction: column
+      align-items: center
+      text-align: center
+      color: #fff
+      +r(1200)
+        padding-bottom: 40px
     &-icon
       width: 70px
       height: 70px
@@ -726,6 +772,8 @@ input[type="number"]
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)
   border-radius: 3px
   padding: 30px
+  +r(1200)
+    padding: 10px
   .select__wrp
     select
       border: 1px solid $lgr
@@ -753,9 +801,17 @@ input[type="number"]
             &-prev
               left: 50%
               margin-left: calc(-1110px/2)
+              +r(1200)
+                left: 5px
+                margin-left: 0
+
             &-next
               right: 50%
               margin-right: calc(-1110px/2)
+              +r(1200)
+                right: 5px
+                margin-right: 0
+
     &__item
       margin-top: 50px
       margin-bottom: 50px
@@ -771,13 +827,24 @@ input[type="number"]
         font-size: 25px
         font-family: $g-bold
         text-transform: uppercase
+        +r(1200)
+          font-size: 16px
+          padding-left: 25px
+          padding-right: 25px
         &_1
           span
             background-color: $dark
             color: #fff
             padding: 4px 15px
+            +r(1200)
+              text-align: center
+              padding: 4px
+              position: relative
+              z-index: 2
             &:nth-child(2)
               width: 70%
+              +r(1200)
+                width: auto
       &-img
         position: absolute
         width: 449px
@@ -785,12 +852,23 @@ input[type="number"]
         right: 0
         top: -85px
         +ct
+        +r(1200)
+          top: 50%
+          transform: translateY(-50%)
+          right: 15px
+          width: 80%
+          height: 300px
+          // display: none
 .part
   &__item
     width: 149px
     height: 151px
     position: relative
     margin-bottom: 10px
+    +r(1200)
+      margin-bottom: 30px
+      margin-left: auto
+      margin-right: auto
     &::before
       content: ''
       position: absolute
@@ -828,6 +906,8 @@ input[type="number"]
             &-prev
               border-color: $lgr
               top: -74px
+              +r(1200)
+                top: -50px
               left: auto
               right: 45px
               svg
@@ -835,6 +915,8 @@ input[type="number"]
             &-next
               border-color: $lgr
               top: -74px
+              +r(1200)
+                top: -50px
               svg
                 stroke: $lgr
   &__item
@@ -850,6 +932,8 @@ input[type="number"]
       border-radius: 3px
       width: 100%
       height: 270px
+      +r(1200)
+        height: 180px
       border: 5px solid $gr
       +ease
       display: flex
@@ -858,6 +942,8 @@ input[type="number"]
       &-img
         width: 192px
         height: 192px
+        +r(1200)
+          height: 120px
         +ct
     &:hover
       .hit__item-top
@@ -865,6 +951,8 @@ input[type="number"]
 .test
   &__item
     position: relative
+    +r(1200)
+      margin-bottom: 30px
     &::before
       content: ''
       position: absolute
@@ -878,6 +966,8 @@ input[type="number"]
       width: 97%
       height: 97%
       min-height: 390px
+      +r(1200)
+        min-height: unset
       color: #fff
       background-color: $gr
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)
@@ -916,6 +1006,11 @@ input[type="number"]
     height: 110px
     position: relative
     margin-bottom: 10px
+    +r(1200)
+      width: 100%
+      margin-left: auto
+      margin-right: auto
+      margin-bottom: 30px
     &::before
       content: ''
       position: absolute
@@ -957,6 +1052,8 @@ input[type="number"]
       bottom: -10px
       border: 1px solid #dfdfdf
       border-radius: 3px
+      +r(1200)
+        display: none
     &>.row
       position: relative
   &__item
@@ -969,6 +1066,10 @@ input[type="number"]
     overflow: hidden
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25)
     min-height: 330px
+    +r(1200)
+      min-height: unset
+      padding: 25px 20px
+      margin-bottom: 30px
     &::before
       +ovl
       background-color: $gr
@@ -994,11 +1095,34 @@ input[type="number"]
         background-color: $yel
         opacity: .8
 .sale
+  &__in
+    .owl
+      &-nav
+        button
+          &.owl
+            &-prev
+              border-color: $lgr
+              top: -85px
+              +r(1200)
+                top: -70px
+              left: auto
+              right: 45px
+              svg
+                stroke: $lgr
+            &-next
+              border-color: $lgr
+              top: -85px
+              +r(1200)
+                top: -70px
+              svg
+                stroke: $lgr
   &__more
     position: relative
     text-decoration: underline
     margin-bottom: 7px
     margin-left: 40px
+    +r(1200)
+      margin-left: 0
     &::before
       content: ''
       position: absolute
@@ -1008,6 +1132,8 @@ input[type="number"]
       left: -20px
       background-color: $dark
       opacity: .3
+      +r(1200)
+        display: none
   &__item
     display: flex
     flex-direction: column
@@ -1015,3 +1141,187 @@ input[type="number"]
       width: 100%
       height: 213px
       +cv
+.feed
+  background-color: $dark
+  color: #fff
+  &__container
+    position: relative
+    &>.row
+      position: relative
+      z-index: 1
+  &__img
+    position: absolute
+    width: 523px
+    height: 620px
+    +ct
+    right: -130px
+    bottom: -180px
+    background-image: url('../img/feed__img.png')
+    +r(1200)
+      display: none
+.mess
+  &__icon
+    width: 30px
+    height: 30px
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 50%
+    &_wa
+      background-color: #25D366
+      fill: #fff
+    &_vi
+      background-color: #665CA7
+      fill: #fff
+.map
+  position: relative
+  height: 584px
+  z-index: 2
+  +r(1200)
+    padding-top: 0
+    height: auto
+    background-color: $dark
+    overflow: hidden
+  &__cnt
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translateY(-50%)
+    margin-left: calc(-1110px/2)
+    background-color: #3b3b3bba
+    color: #fff
+    max-width: 587px
+    padding: 40px 50px
+    +r(1200)
+      position: relative
+      max-width: unset
+      left: 15px
+      top: 0
+      transform: translate(0)
+      margin-left: 0
+      padding: 0
+#map
+  position: absolute
+  width: 100%
+  height: 100px
+  left: 0
+  top: 0
+  +r(1200)
+    display: none
+.footer
+  color: #fff
+  background-color: $dark
+  &__copy
+    +r(1200)
+      font-size: 12px
+      text-align: center
+  &_hidden
+    width: 100%
+    height: 21px
+    color: $dark
+  &__ttl
+    &-arr
+      display: none
+      +r(1200)
+        display: block
+        +ease
+        fill: none
+        stroke: #fff
+        margin-left: 15px
+        transform: scale(1) rotate(-90deg)
+    &.active
+      .footer__ttl-arr
+        transform: scale(-1) rotate(-90deg)
+  &__link
+    height: 20px
+    +r(1200)
+      transition: unset
+  &__logo
+    position: relative
+    display: block
+    img
+      +ease
+    &:hover
+      img
+        transform: scale(.95)
+    &::after
+      content: ''
+      position: absolute
+      width: 1px
+      height: 100%
+      top: 0
+      right: -15px
+      background-color: $lgr
+      opacity: .2
+  hr
+    background-color: $lgr
+    opacity: .2
++r(1200)
+  .search_mob
+    background-color: #3b3b3bdb
+    color: #fff
+    width: 100%
+    height: calc(100vh - 68px)
+    padding: 15px
+    position: fixed
+    left: 0
+    overflow-y: scroll
+    opacity: 0
+    visibility: hidden
+    z-index: -1
+    +ease
+    &.active
+      top: 68px
+      visibility: visible
+      z-index: 999
+      opacity: 1
+.mm
+  &-slideout
+    z-index: auto
+  &-wrapper_opened
+    .header
+      &_mob__hamb
+        &-img
+          &_1
+            transform: translate(-50%,-50%) scale(.5)
+            opacity: 0
+          &_2
+            opacity: 1
+            transform: translate(-50%,-50%) scale(1)
+  &-menu
+    color: #000
+    background-color: #F3F3F3
+    font-family: $g-bold
+    &_position-bottom
+      height: calc(100vh - 68px)
+    &__tel
+      color: $dark !important
+      margin-right: 30px
+      position: relative
+      &::after
+        content: ''
+        position: absolute
+        right: -15px
+        top: 0
+        width: 1px
+        height: 100%
+        background-color: #000
+    &__mail
+      font-family: $g-reg
+      text-decoration: underline !important
+      color: $dark !important
+  &-listitem
+    color: #000
+    &:after
+      left: 0 !important
+      right: 0 !important
+    &_selected
+      .mm-listitem__text
+        background-color: $yel
+        // color: #fff !important
+    span:hover,
+    a:hover
+      background-color: $yel
+      // &>div,
+      // &>span
+      //   color: #fff !important

@@ -1,4 +1,8 @@
 $(function() {
+  //preloader
+  $(window).on('load', function () {
+      $('.preloader').fadeOut();
+  });
   $('.fil-slider').owlCarousel({
       nav: true,
       items: 1,
@@ -6,23 +10,6 @@ $(function() {
       dots: false,
       smartSpeed: 800,
       navText: ["<svg width='7' height='12' viewBox='0 0 7 12' xmlns='http://www.w3.org/2000/svg'><path d='M6 1L1 6L6 11' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>", "<svg width='7' height='12' viewBox='0 0 7 12' xmlns='http://www.w3.org/2000/svg'><path d='M1 11L6 6L0.999999 1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>"],
-      // responsive : {
-      //   0   : {
-      //       items: 1
-      //   },
-      //   380 : {
-      //       items: 1
-      //   },
-      //   480 : {
-      //       items: 1
-      //   },
-      //   768 : {
-      //       items: 3
-      //   },
-      //   1040 : {
-      //       items: 4
-      //   }
-      // }
   });
   $('.hit__in').owlCarousel({
       nav: true,
@@ -41,36 +28,232 @@ $(function() {
         480 : {
             items: 1
         },
-        768 : {
+        600 : {
+            items: 2
+        },
+        900 : {
             items: 3
         },
-        1040 : {
+        1200 : {
             items: 4
         }
       }
   });
-  // tabs 
-  if ( $(window).width() > 600 ) {
-    $(document).ready(function () {
-      $(".tabs__content-item:not(:first-child)").hide();
-      $(".tabs__container div.tabs__content-item.active-tab").show();
-      $('ul.tabs__list > li').click(function () {
-        if (!($(this).hasClass('active'))) {
-          var thisLi = $(this);
-          var numLi = thisLi.index();
-          thisLi.addClass('active').siblings().removeClass('active');
-          thisLi.parent().next().children('div').hide().eq(numLi).fadeIn('slow');
+  $('.sale__in').owlCarousel({
+      nav: true,
+      loop: false,
+      dots: false,
+      smartSpeed: 800,
+      margin: 30,
+      navText: ["<svg width='7' height='12' viewBox='0 0 7 12' xmlns='http://www.w3.org/2000/svg'><path d='M6 1L1 6L6 11' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>", "<svg width='7' height='12' viewBox='0 0 7 12' xmlns='http://www.w3.org/2000/svg'><path d='M1 11L6 6L0.999999 1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>"],
+      responsive : {
+        0   : {
+            items: 1
+        },
+        380 : {
+            items: 1
+        },
+        480 : {
+            items: 1
+        },
+        600 : {
+            items: 2
+        },
+        1200 : {
+            items: 3
         }
+      }
+  });
+  //map
+  $(document).ready(function () {
+    var myMap;
+
+    ymaps.ready(init);
+    function init(){
+      myMap = new ymaps.Map("map", {
+          center: [55.7270,37.6382],
+          globalPixelCenter: [54,35],
+          zoom: 16,
+          // scrollZoom: false,
+          controls: ["typeSelector"],
       });
+      myMap.behaviors.disable('drag');
+      myMap.behaviors.disable('scrollZoom'); 
+      var placemarks = [
+          {
+              coords: [55.726639069021054,37.645959],
+              icon: 'img/baloon.svg',
+              icon_size: [160, 114],
+              icon_offset: [-80, -114], // -50% ширины, -100% высоты от точки привязки (левый верхний угол)
+          }
+      ];
+
+      placemarks.forEach(function(item){
+          var obj = new ymaps.Placemark(
+              item.coords,
+              {},
+              {
+                  iconLayout: 'default#image',
+                  iconImageHref: item.icon,
+                  iconImageSize: item.icon_size,
+                  iconImageOffset: item.icon_offset,
+              }
+          );
+          myMap.geoObjects.add(obj);
+      });
+    };
+  });
+  // tabs 
+  // if ( $(window).width() > 600 ) {
+  //   $(document).ready(function () {
+  //     $(".tabs__content-item:not(:first-child)").hide();
+  //     $(".tabs__container div.tabs__content-item.active-tab").show();
+  //     $('ul.tabs__list > li').click(function () {
+  //       if (!($(this).hasClass('active'))) {
+  //         var thisLi = $(this);
+  //         var numLi = thisLi.index();
+  //         thisLi.addClass('active').siblings().removeClass('active');
+  //         thisLi.parent().next().children('div').hide().eq(numLi).fadeIn('slow');
+  //       }
+  //     });
+  //   });
+  // };
+  // if ( $(window).width() < 600 ) {
+  //   $('.tabs-acc__btn').on('click', function(){
+  //     $(this).toggleClass('active').siblings('.tabs-acc__cnt').slideToggle();
+  //   })
+  // };
+  if ( $(window).width() < 1200 ) {
+    $('.banner__test-list').removeClass('row').addClass('owl-carousel');
+    $('.banner__test-item-wrp').removeClass('col-xl-3 col-sm-6 mb-5 mb-xl-3');
+    $('.banner__test-list').owlCarousel({
+      nav: false,
+      autoplay: true,
+      loop: true,
+      smartSpeed: 700,
+      margin: 20,
+      dots: true,
+      responsive : {
+        0   : {
+            items: 1
+        },
+        380 : {
+            items: 1
+        },
+        600 : {
+            items: 2
+        },
+        1200 : {
+            items: 3
+        }
+      }
+    });
+    $('.part').removeClass('d-flex').addClass('owl-carousel');
+    $('.part').owlCarousel({
+      nav: false,
+      autoplay: true,
+      loop: true,
+      smartSpeed: 700,
+      margin: 20,
+      dots: true,
+      responsive : {
+        0   : {
+            items: 1
+        },
+        380 : {
+            items: 2
+        },
+        600 : {
+            items: 4
+        },
+        1200 : {
+            items: 5
+        }
+      }
+    });
+    $('.test__list').removeClass('row').addClass('owl-carousel');
+    $('.test__item-wrp').removeClass('col-xl-4');
+    $('.test__list').owlCarousel({
+      nav: false,
+      autoplay: true,
+      loop: true,
+      smartSpeed: 700,
+      margin: 20,
+      dots: true,
+      responsive : {
+        0   : {
+            items: 1
+        },
+        380 : {
+            items: 1,
+            autoHeight: true,
+        },
+        1200 : {
+            items: 3
+        }
+      }
+    });
+    $('.trust__list').removeClass('d-flex').addClass('owl-carousel');
+    $('.trust__list').owlCarousel({
+      nav: false,
+      autoplay: true,
+      loop: true,
+      smartSpeed: 700,
+      margin: 20,
+      dots: true,
+      responsive : {
+        0   : {
+            items: 1
+        },
+        380 : {
+            items: 2,
+        },
+        1200 : {
+            items: 3
+        }
+      }
+    });
+    $('.ben__list').removeClass('row').addClass('owl-carousel');
+    $('.ben__item-wrp').removeClass('col-xl-4');
+    $('.ben__list').owlCarousel({
+      nav: false,
+      autoplay: true,
+      loop: true,
+      smartSpeed: 700,
+      margin: 20,
+      dots: true,
+      responsive : {
+        0   : {
+            items: 1
+        },
+        380 : {
+            items: 1,
+            autoHeight: true,
+        },
+        1200 : {
+            items: 3
+        }
+      }
+    });
+    $("#menu").mmenu({
+      extensions : [ "position-bottom", "listview-50", "fx-listitems-drop", "border-offset" ],
+      autoHeight : false,
+      navbar: { title: "Меню" }
+    });
+    $('.header_mob__search-btn').on('click', function(e) {
+      $('html').toggleClass('fixed');
+      // $(this).toggleClass('active');
+      $('.search_mob').toggleClass('active');
+    });
+    $('.search_mob__close').on('click', function(e) {
+      $('html').toggleClass('fixed');
+      $('.search_mob').toggleClass('active');
+    });
+    //footer dropdown
+    $('.footer__link').hide();
+    $('.footer__ttl').on('click', function(e){
+      e.preventDefault();
+      $(this).toggleClass('active').parent('div').find('.footer__link').slideToggle();
     });
   };
-  if ( $(window).width() < 600 ) {
-    $('.tabs-acc__btn').on('click', function(){
-      $(this).toggleClass('active').siblings('.tabs-acc__cnt').slideToggle();
-    })
-  };
-  //Закрываем AjaxForm popup после успешной отправки
-  // $(document).on('af_complete', function(event,res) {
-  //   if(res.success) parent.$.fancybox.close();
-  // });
 });
