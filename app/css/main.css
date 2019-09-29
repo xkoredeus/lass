@@ -2215,8 +2215,8 @@ a.yel:hover {
 }
 
 .mm-menu_position-bottom {
-  height: -webkit-calc(100vh - 68px);
-  height: calc(100vh - 68px);
+  height: -webkit-calc(100% - 68px);
+  height: calc(100% - 68px);
 }
 
 .mm-menu__tel {
