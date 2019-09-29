@@ -150,7 +150,7 @@
           </div>
           <div class="col-xl-3 d-none d-xl-block">
             <div class="d-flex flex-column justify-content-between banner__info-col">
-              <a href="#popup_call" class="btn banner__btn w-100">Заказать звонок</a>
+              <button type="button" data-fancybox data-src="#popup_call" class="btn banner__btn fancybox-call w-100">Заказать звонок</button>
               <div class="tac lgr">Звонок по России бесплатный</div>
             </div>
           </div>
@@ -379,7 +379,7 @@
                 </svg>
               </span>
             </button>
-            <div class="fancybox und tal curp fancy-link">Купить<br> в один клик</div>
+            <div class="fancybox und tal curp fancy-link fancybox-call" data-fancybox data-src="#popup_success" >Купить<br> в один клик</div>
           </div>
         </form>
         <!--item-->
@@ -402,7 +402,7 @@
                 </svg>
               </span>
             </button>
-            <div class="fancybox und tal curp fancy-link">Купить<br> в один клик</div>
+            <div class="fancybox und tal curp fancy-link fancybox-call" data-fancybox data-src="#popup_add" >Купить<br> в один клик</div>
           </div>
         </form>
         <!--item-->
@@ -425,7 +425,7 @@
                 </svg>
               </span>
             </button>
-            <div class="fancybox und tal curp fancy-link">Купить<br> в один клик</div>
+            <div class="fancybox und tal curp fancy-link fancybox-call" data-fancybox data-src="#popup_cart" >Купить<br> в один клик</div>
           </div>
         </form>
         <!--item-->
@@ -448,7 +448,7 @@
                 </svg>
               </span>
             </button>
-            <div class="fancybox und tal curp fancy-link">Купить<br> в один клик</div>
+            <div class="fancybox und tal curp fancy-link fancybox-call" data-fancybox data-src="#popup_cart" >Купить<br> в один клик</div>
           </div>
         </form>
         <!--item-->
@@ -471,7 +471,7 @@
                 </svg>
               </span>
             </button>
-            <div class="fancybox und tal curp fancy-link">Купить<br> в один клик</div>
+            <div class="fancybox und tal curp fancy-link fancybox-call" data-fancybox data-src="#popup_cart" >Купить<br> в один клик</div>
           </div>
         </form>
         <!--item-->
@@ -494,7 +494,7 @@
                 </svg>
               </span>
             </button>
-            <div class="fancybox und tal curp fancy-link">Купить<br> в один клик</div>
+            <div class="fancybox und tal curp fancy-link fancybox-call" data-fancybox data-src="#popup_cart" >Купить<br> в один клик</div>
           </div>
         </form>
         <!--item-->
@@ -942,26 +942,113 @@
     </div>
   </div>
   <!--/mobile search-->
+  <!--form popup-->
   <div id="popup_call" class="popup__container" style="display:none">
     <div  class="popup__wrp popup_call__wrp">
       <form action="[[~[[*id]]]]" method="post" class="popup">
-        <h3 class="popup__ttl">Оставьте заявку</h3>
-        <div class="input__wrp input__wrp_name">
-          <input type="text" name="popup_call__name" placeholder="Ваше имя" required="">
+        <div class="section__ttl mb-2">ЗАКАЗАТЬ ЗВОНОК</div>
+        <div class="mb-3">Напишите о том, какая продукция вас интересует — мы пришлем варианты по цене в течение дня!</div>
+        <div class="d-flex flex-column tal mb-3 popup_call__col">
+          <div class="mb-2">Имя*</div>
+          <input type="text" name="popup_call__name" required="" class="w-100">
         </div>
-        <div class="input__wrp input__wrp_tel">
-          <input type="tel" name="popup_call__tel" placeholder="Телефон" required="">
+        <div class="d-flex flex-column tal mb-3 popup_call__col">
+          <div class="mb-2">Номер телефона*</div>
+          <input type="tel" name="popup_call__tel" required="" class="w-100">
         </div>
-        <div class="input__wrp input__wrp_mail">
-          <input type="email" name="popup_call__email" placeholder="E-mail">
+        <div class="d-flex flex-column tal mb-4 popup_call__col">
+          <div class="mb-2">Сообщение</div>
+          <textarea name="popup_call__text" rows="3" class="w-100"></textarea>
         </div>
-        <input type="submit" class="btn" name="popup_call__sumbit" value="Заказать">
-        <div class="popup__policy">
-          Нажимая кнопку "Отправить", вы соглашаетесь с <a href="#" class="form__policy-link">политикой конфиденциальности</a>
+        <input type="submit" class="btn mb-3" name="popup_call__sumbit" value="Отправить">
+        <label for="popup_call__checkbox" class="checkbox mb-3">
+          <input type="checkbox" id="popup_call__checkbox" required="" checked>
+          <span class="checkbox__text">Отправляя заявку, вы соглашаетесь на обработку <a href="#">персональных данных</a></span>
+        </label>
+      </form>
+    </div>
+  </div>
+  <!--/form popup-->
+  <!--success popup-->
+  <div id="popup_success" class="popup__container" style="display:none">
+    <div class="popup__wrp popup_success__wrp">
+      <div class="popup">
+        <span class="section__ttl ttn mb-0">Ваша заявка успешно отправлена</span>
+      </div>
+    </div>
+  </div>
+  <!--/success popup-->
+  <!--add popup-->
+  <div id="popup_add" class="popup__container" style="display:none">
+    <div class="popup__wrp popup_add__wrp">
+      <div class="popup">
+        <span class="section__ttl ttn">Ваш товар успешно добавлен в корзину</span>
+        <div class="row w-100">
+          <div class="col-sm-6 mb-2 mb-sm-0">
+            <a href="#" class="btn w-100 ttn">Перейти в корзину</a>
+          </div>
+          <div class="col-sm-6">
+            <a href="#" class="btn btn_gr w-100 ttn">Продолжить покупки</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/add popup-->
+  <!--cart popup-->
+  <div id="popup_cart" class="popup__container" style="display:none">
+    <div class="popup__wrp popup_cart__wrp">
+      <form class="popup">
+        <div class="d-flex flex-column flex-xl-row justify-content-xl-between align-items-xl-center w-100">
+          <div class="b mr-xl-2">Картридж Ricoh GC 41ML пурпурный, гелевый</div>
+          <div class="quantity mr-xl-2 d-flex justify-content-center">
+            <button type="button" class="quantity-minus"><span>-</span></button>
+            <input type="number" min="1" value="1" class="quantity-num">
+            <button type="button" class="quantity-plus"><span>+</span></button>
+          </div>
+          <div class="b">9 282 Р</div>
+        </div>
+        <hr class="mt-2 mt-xl-3 mb-2 mb-xl-3 w-100">
+        <div class="row w-100">
+          <div class="col-xl-6 mb-3">
+            <div class="d-flex flex-column tal">
+              <div class="mb-2">Имя*</div>
+              <input type="text" name="popup_cart__name" required="" class="w-100">
+            </div>
+          </div>
+          <div class="col-xl-6 mb-3">
+            <div class="d-flex flex-column tal">
+              <div class="mb-2">Номер телефона*</div>
+              <input type="tel" name="popup_cart__tel" required="" class="w-100">
+            </div>
+          </div>
+          <div class="col-12 mb-3">
+            <div class="d-flex flex-column tal">
+              <div class="mb-2">Сообщение</div>
+              <textarea name="popup_call__text" rows="3" class="w-100"></textarea>
+            </div>
+          </div>
+          <div class="d-flex flex-column align-items-center w-100">
+            <input type="submit" class="btn mb-3" name="popup_cart__sumbit" value="Отправить">
+            <label for="popup_cart__checkbox" class="checkbox mb-3">
+              <input type="checkbox" id="popup_cart__checkbox" required="" checked>
+              <span class="checkbox__text">Отправляя заявку, вы соглашаетесь на обработку <a href="#">персональных данных</a></span>
+            </label>
+          </div>
         </div>
       </form>
     </div>
   </div>
+  <!--/cart popup-->
+  <!--btn top-->
+  <button type="button" class="btn_top">
+    <span>
+      <svg width="17" height="15" viewBox="0 0 17 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 8.5L8.5 1M8.5 1L16 8.5M8.5 1V14.5" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </span>
+  </button>
+  <!--/btn top-->
   <script src="js/libs.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=078a27eb-0b91-4b81-8ea4-d202061ff355" type="text/javascript"></script>
   

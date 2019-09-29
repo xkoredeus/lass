@@ -103,6 +103,33 @@ $(function() {
       });
     };
   });
+  // btn top
+  var top_show = 450; // В каком положении полосы прокрутки начинать показ кнопки "Наверх"
+  var delay = 400; // Задержка прокрутки
+  $(document).ready(function() {
+    $(window).scroll(function () { // При прокрутке попадаем в эту функцию
+      /* В зависимости от положения полосы прокрукти и значения top_show, скрываем или открываем кнопку "Наверх" */
+      if ($(this).scrollTop() > top_show) $('.btn_top').show();
+      else $('.btn_top').hide();
+    });
+    $('.btn_top').click(function (e) { // При клике по кнопке "Наверх" попадаем в эту функцию
+      /* Плавная прокрутка наверх */
+      e.preventDefault();
+      $('body, html').animate({
+        scrollTop: 0
+      }, delay);
+    });
+  });
+  //input type number
+  $( '.quantity' ).on( 'click', '.quantity-minus, .quantity-plus', function (e) {
+    e.preventDefault();
+  var input = $( this ).siblings( '.quantity-num' );
+    if ( (input.val() > 1) && ($( this ).hasClass( 'quantity-minus' ) ) ) {
+        input.val( +input.val() - 1 );
+    } else if ( $( this ).hasClass( 'quantity-plus' ) ) {
+      input.val( +input.val() + 1 );
+    };
+  });
   // tabs 
   // if ( $(window).width() > 600 ) {
   //   $(document).ready(function () {
