@@ -916,6 +916,7 @@ a.yel
       bottom: 0
       border: 1px solid $lgr
       border-radius: 3px
+      +ease
     &-in
       width: 95%
       height: 95%
@@ -926,15 +927,14 @@ a.yel
       justify-content: center
       align-items: center
       position: relative
-      +ease
     &-img
       width: 86px
       height: 50px
       +ct
     &:hover
-      .part__item-in
-        background-color: $yel
-        transform: translate(5%,5%)
+      &::before
+        background-color: $gr
+        border-color: $yel
 .hit
   &__in
     .owl
@@ -1000,6 +1000,7 @@ a.yel
       bottom: -3%
       border: 1px solid $lgr
       border-radius: 3px
+      +ease
     &-in
       width: 97%
       height: 97%
@@ -1036,8 +1037,9 @@ a.yel
         border-radius: 50%
         background-color: #fff
     &:hover
-      .test__item-in
-        transform: translate(3%,3%)
+      &::before
+        background-color: $gr
+        border-color: $yel
 .trust
   &__item
     width: 210px
@@ -1058,6 +1060,7 @@ a.yel
       bottom: 0
       border: 1px solid $lgr
       border-radius: 3px
+      +ease
     &-in
       width: 95%
       height: 95%
@@ -1074,8 +1077,9 @@ a.yel
       height: 76px
       +ct
     &:hover
-      .trust__item-in
-        transform: translate(5%,5%)
+      &::before
+        background-color: $gr
+        border-color: $yel
 .ben
   &__in
     background-color: $gr
