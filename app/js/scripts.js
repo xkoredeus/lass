@@ -130,6 +130,21 @@ $(function() {
       input.val( +input.val() + 1 );
     };
   });
+  // Самописный placeholder
+  $(function () {
+  var placeholderText = [
+    'Xerox Phaser 3010',
+    'NV Print MLT-D111L',
+    'EasyPrint LH-18A',
+    'Solution Print SP-S-111L'
+  ];
+    var $pls = $('.banner__search-input');
+    $pls.placeholderTypewriter({
+      text: placeholderText,
+      delay: 150,
+      pause: 1500,
+    });
+  });
   // tabs 
   // if ( $(window).width() > 600 ) {
   //   $(document).ready(function () {

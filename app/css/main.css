@@ -527,8 +527,8 @@ a.yel:hover {
 .btn:hover {
   color: #fff;
   opacity: .9;
-  -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.15);
 }
 
 .btn_submit {
@@ -1761,6 +1761,15 @@ a.yel:hover {
   background-color: #F4F4F4;
 }
 
+@media only screen and (max-width: 1200px) {
+  .ben__in {
+    margin-bottom: 30px;
+  }
+  .ben__in .owl-carousel .owl-dots {
+    bottom: -30px;
+  }
+}
+
 .ben__container {
   position: relative;
 }
@@ -1816,7 +1825,6 @@ a.yel:hover {
   .ben__item {
     min-height: unset;
     padding: 25px 20px;
-    margin-bottom: 30px;
   }
 }
 
@@ -1836,9 +1844,6 @@ a.yel:hover {
 
 .ben__item > * {
   position: relative;
-  -webkit-transition: .4s all ease;
-  -o-transition: .4s all ease;
-  transition: .4s all ease;
 }
 
 .ben__item-icon {
@@ -1857,10 +1862,17 @@ a.yel:hover {
   background-color: #fff;
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  -webkit-transition: unset;
+  -o-transition: unset;
+  transition: unset;
 }
 
 .ben__item:hover {
   color: #fff;
+}
+
+.ben__item:hover .ben__item-ttl {
+  text-decoration: underline;
 }
 
 .ben__item:hover::before {
@@ -1950,6 +1962,20 @@ a.yel:hover {
   background-repeat: no-repeat;
 }
 
+.sale__item-ttl {
+  -webkit-transition: .4s all ease;
+  -o-transition: .4s all ease;
+  transition: .4s all ease;
+}
+
+.sale__item:hover {
+  color: #000;
+}
+
+.sale__item:hover .sale__item-ttl {
+  color: #F39C12;
+}
+
 .feed {
   background-color: #3B3B3B;
   color: #fff;
@@ -1985,6 +2011,18 @@ a.yel:hover {
 @media only screen and (max-width: 1200px) {
   .feed__img {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .feed .section__ttl {
+    text-align: center !important;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .feed .btn {
+    width: 100%;
   }
 }
 
@@ -2159,6 +2197,12 @@ a.yel:hover {
   right: -15px;
   background-color: #B1B1B1;
   opacity: .2;
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer__logo::after {
+    display: none;
+  }
 }
 
 .footer hr {

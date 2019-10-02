@@ -33,7 +33,8 @@ gulp.task('scripts', function() {
     'app/libs/jquery/jquery.min.js',
     'app/libs/fancybox/jquery.fancybox.min.js',
     'app/libs/owl.carousel/owl.carousel.min.js',
-    'app/libs/mmenu/mmenu.js'
+    'app/libs/mmenu/mmenu.js',
+    'app/libs/placeholdertypewriter/placeholdertypewriter.js'
     ])
     .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
     // .pipe(uglify()) // Сжимаем JS файл
