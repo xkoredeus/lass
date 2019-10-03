@@ -64,6 +64,32 @@ $(function() {
         }
       }
   });
+  $('.trust__list').owlCarousel({
+    nav: true,
+    navText: ["<svg width='7' height='12' viewBox='0 0 7 12' xmlns='http://www.w3.org/2000/svg'><path d='M6 1L1 6L6 11' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>", "<svg width='7' height='12' viewBox='0 0 7 12' xmlns='http://www.w3.org/2000/svg'><path d='M1 11L6 6L0.999999 1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>"],
+    autoplay: true,
+    loop: true,
+    smartSpeed: 700,
+    margin: 20,
+    dots: false,
+    responsive : {
+      0   : {
+          items: 1
+      },
+      380 : {
+          items: 2,
+      },
+      600 : {
+          items: 3,
+      },
+      800 : {
+          items: 4,
+      },
+      1200 : {
+          items: 5
+      }
+    }
+  });
   //map
   $(document).ready(function () {
     var myMap;
@@ -229,26 +255,6 @@ $(function() {
         380 : {
             items: 1,
             autoHeight: true,
-        },
-        1200 : {
-            items: 3
-        }
-      }
-    });
-    $('.trust__list').removeClass('d-flex').addClass('owl-carousel');
-    $('.trust__list').owlCarousel({
-      nav: false,
-      autoplay: true,
-      loop: true,
-      smartSpeed: 700,
-      margin: 20,
-      dots: true,
-      responsive : {
-        0   : {
-            items: 1
-        },
-        380 : {
-            items: 2,
         },
         1200 : {
             items: 3

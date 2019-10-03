@@ -3,10 +3,12 @@ $dark: #3B3B3B
 $yel: #F39C12
 $lgr: #B1B1B1
 $gr: #F4F4F4
+$dgr: #929292
 $tr: transparent
 
 $g-reg: 'GothamPro'
 $g-black: 'GothamPro-Black'
+$g-med: 'GothamPro-Medium'
 $g-bold: 'GothamPro-Bold'
 
 @mixin ct
@@ -259,6 +261,8 @@ input[type="number"]
     box-shadow: 0px 30px 40px rgba(0, 80, 147, 0.25)
 .b
   font-family: $g-bold
+.m
+  font-family: $g-med
 .tac
   text-align: center
 .tal
@@ -273,6 +277,8 @@ input[type="number"]
   cursor: pointer
 .lgr
   color: $lgr
+.dgr
+  color: $dgr
 .wt
   color: #fff
 a.wt
@@ -293,6 +299,8 @@ a.yel
   font-size: 18px
 .fz15
   font-size: 15px
+.fz13
+  font-size: 13px
 .btn
   font-size: 16px
   font-family: $g-bold
@@ -328,7 +336,7 @@ a.yel
       position: relative
       &::before
         +ovl
-        height: 103%
+        height: 123%
         top: -3%
         background-color: $yel
         +ease
@@ -1041,6 +1049,27 @@ a.yel
         background-color: $gr
         border-color: $yel
 .trust
+  &__list
+    .owl
+      &-nav
+        button
+          &.owl
+            &-prev
+              border-color: $lgr
+              top: -74px
+              +r(1200)
+                top: -50px
+              left: auto
+              right: 45px
+              svg
+                stroke: $lgr
+            &-next
+              border-color: $lgr
+              top: -74px
+              +r(1200)
+                top: -50px
+              svg
+                stroke: $lgr
   &__item
     width: 210px
     height: 110px
@@ -1056,7 +1085,7 @@ a.yel
       position: absolute
       width: 95%
       height: 95%
-      right: 0
+      right: 6px
       bottom: 0
       border: 1px solid $lgr
       border-radius: 3px
@@ -1198,18 +1227,21 @@ a.yel
 .feed
   background-color: $dark
   color: #fff
+  overflow: hidden
   &__container
     position: relative
     &>.row
       position: relative
       z-index: 1
+  .section__ttl
+    font-size: 30px
   &__img
     position: absolute
-    width: 523px
-    height: 620px
+    width: 423px
+    height: 520px
     +ct
     right: -130px
-    bottom: -180px
+    bottom: -120px
     background-image: url('../img/feed__img.png')
     +r(1370)
       right: 0
@@ -1217,6 +1249,7 @@ a.yel
       display: none
   +r(1200)
     .section__ttl
+      font-size: 20px
       text-align: center !important
   .btn
     +r(500)
@@ -1391,3 +1424,60 @@ a.yel
       // &>div,
       // &>span
       //   color: #fff !important
+.crumbs
+  display: flex
+  flex-wrap: wrap
+  list-style-type: none
+  padding: 25px 0
+  margin-bottom: 0
+  +r(1200)
+    padding: 15px 0
+  li
+    border-radius: 3px
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)
+  li,
+  a
+    font-size: 13px
+    position: relative
+    color: $dark
+    padding: 7px 12px
+    margin-bottom: 10px
+  li:not(:last-child)
+    background-color: $gr
+    margin-right: 8px
+    +ease
+    &:hover
+      background-color: $yel
+      a
+        transition: unset
+        color: #fff
+  li:last-child
+    color: #fff
+    background-color: $yel
+.main
+  background-color: $gr
+.card
+  &__info
+    background-color: #fff
+    border-radius: 3px
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25)
+    padding: 25px
+    &-price
+      color: #05162E
+    .btn
+      padding-left: 15px
+      padding-right: 15px
+  &__print
+    width: 50px
+    height: 50px
+    padding: 10px
+    background: $gr
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)
+    border-radius: 2px
+    display: flex
+    justify-content: center
+    align-items: center
+    svg
+      fill: #000
+    &:hover
+      background-color: $yel
