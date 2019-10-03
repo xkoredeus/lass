@@ -1,10 +1,12 @@
 @import "../fonts/fonts.css"
 $dark: #3B3B3B
 $yel: #F39C12
+$wgr: #E5E5E5
 $lgr: #B1B1B1
 $gr: #F4F4F4
 $dgr: #929292
 $tr: transparent
+$bl: #3498DB
 
 $g-reg: 'GothamPro'
 $g-black: 'GothamPro-Black'
@@ -36,34 +38,6 @@ $g-bold: 'GothamPro-Bold'
 html
   &.fixed
     overflow: hidden
-.preloader
-  position: fixed
-  left: 0
-  top: 0
-  right: 0
-  bottom: 0
-  min-height: 100vh
-  display: flex
-  flex-wrap: wrap
-  justify-content: space-around
-  align-content: space-around
-  flex: 1 1 25%
-  background-color: #fff
-  z-index: 1000
-.preloader__icon
-  width: 4em
-  height: 4em
-  margin: auto
-  background-color: $yel
-  animation: rotating-plane 1.2s infinite ease-in-out
-@keyframes rotating-plane
-  0%
-    transform: perspective(120px) rotateX(0deg) rotateY(0deg)
-  50%
-    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg)
-    background-color: $dark
-  100%
-    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg)
 body
   scroll-behavior: smooth
   background-color: #fff
@@ -187,12 +161,35 @@ input[type="number"]
     right: 15px
     color: $yel
 .tabs
-  &__content-item
-    transition: unset
   &__list
     list-style-type: none
     padding: 0
     margin: 0
+    +r(600)
+      display: none
+    li
+      padding: 10px 15px
+      +ease
+      cursor: pointer
+      &.active
+        background-color: $yel
+        color: #fff
+  &-acc
+    &__btn
+      display: none
+      width: 100%
+      padding: 12px 25px
+      background-color: $wgr
+      text-align: center
+      cursor: pointer
+      border: 1px solid #fff
+      +r(600)
+        display: block
+      &.active
+        background-color: $yel
+        color: #fff
+    &__cnt
+      transition: unset
 .checkbox
   cursor: pointer
   position: relative
@@ -277,6 +274,8 @@ input[type="number"]
   cursor: pointer
 .lgr
   color: $lgr
+.bl
+  color: $bl
 .dgr
   color: $dgr
 .wt
@@ -1228,6 +1227,7 @@ a.yel
   background-color: $dark
   color: #fff
   overflow: hidden
+  position: relative
   &__container
     position: relative
     &>.row
@@ -1243,8 +1243,6 @@ a.yel
     right: -130px
     bottom: -120px
     background-image: url('../img/feed__img.png')
-    +r(1370)
-      right: 0
     +r(1200)
       display: none
   +r(1200)
@@ -1455,18 +1453,99 @@ a.yel
     color: #fff
     background-color: $yel
 .main
-  background-color: $gr
+  background-color: #f9f9f9
 .card
+  &__slider
+    &-top
+      background-color: $gr
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)
+      border-radius: 3px
+      &-item
+        width: 100%
+        min-height: 432.5px
+        +ct
+        background-size: 80%
+        +r(600)
+          min-height: 230px
+    &-bot
+      &-item
+        min-height: 140px
+        +ct
+        background-size: 80%
+        background-color: $gr
+        box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)
+        border-radius: 3px
+        margin-bottom: 5px
+        border: 4px solid $tr
+        +ease
+        cursor: pointer
+        &:hover
+          border-color: #fff
+        +r(600)
+          min-height: 90px
+      .synced
+        .card__slider-bot-item
+          border-color: #fff
   &__info
     background-color: #fff
     border-radius: 3px
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25)
     padding: 25px
+    +r(600)
+      .btn
+        width: 100%
+      .quantity
+        // max-width: unset
+        // width: 100%
     &-price
       color: #05162E
+      +r(1200)
+        text-align: center !important
     .btn
       padding-left: 15px
       padding-right: 15px
+    &-test
+      position: relative
+      cursor: pointer
+      svg
+        min-width: 14px
+      span
+        +ease
+      &:hover
+        span
+          color: $bl
+    &-pop
+      width: 100%
+      height: 100%
+      position: relative
+      background-color: #fff
+      border: 1px solid #3498DB
+      box-sizing: border-box
+      box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.15)
+      border-radius: 3px
+      padding: 25px
+      &::before
+        content: ''
+        position: absolute
+        width: 10px
+        height: 10px
+        top: -6px
+        left: 55px
+        background-color: #fff
+        border-top: 1px solid $bl
+        border-left: 1px solid $bl
+        transform: rotate(45deg)
+      p
+        font-size: 14px
+      &-wrp
+        position: absolute
+        left: 0
+        top: 30px
+        width: 450px
+        z-index: 2
+        display: none
+        +r(600)
+          width: 310px
   &__print
     width: 50px
     height: 50px
@@ -1481,3 +1560,78 @@ a.yel
       fill: #000
     &:hover
       background-color: $yel
+  &__tabs-wrp
+    .tabs
+      &__list
+        text-align: center
+        li
+          background-color: $gr
+          &.active
+            background-color: $yel
+            color: #fff
+      &-acc
+        &__btn
+          &.active
+            background-color: $yel
+            color: #fff
+        &__cnt
+          padding: 25px
+          background-color: #fff
+          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15)
+          border-bottom-left-radius: 2px
+          border-bottom-right-radius: 2px
+          +r(600)
+            font-size: 14px
+            padding: 10px
+            display: none
+  &__prop
+    position: relative
+    margin-bottom: 8px
+    cursor: pointer
+    min-height: 35px
+    span
+      background-color: $gr
+      text-align: center
+      border-radius: 3px
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)
+      padding: 10px 15px
+      +ease
+      &:not(:last-child)
+        margin-right: 5px
+      &:hover
+        color: #fff
+        background-color: $yel
+    &-pop
+      padding: 10px
+      width: 200px
+      // height: 250px
+      display: flex
+      flex-direction: column
+      align-items: center
+      background-color: #fff
+      padding: 15px
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15)
+      &::before
+        content: ''
+        position: absolute
+        width: 10px
+        height: 10px
+        top: -3px
+        left: 50%
+        background-color: #fff
+        border-top-left-radius: 5px
+        transform: translateX(-50%) rotate(45deg)
+      &-wrp
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        top: 30px
+        width: 200px
+        z-index: 2
+        display: none
+  &__other
+    .section__ttl
+      +r(470)
+        max-width: 340px
+      +r(360)
+        max-width: 200px
