@@ -86,6 +86,32 @@ $(function() {
       }
     }
   });
+  $('.rev__list').owlCarousel({
+    nav: true,
+    navText: ["<svg width='7' height='12' viewBox='0 0 7 12' xmlns='http://www.w3.org/2000/svg'><path d='M6 1L1 6L6 11' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>", "<svg width='7' height='12' viewBox='0 0 7 12' xmlns='http://www.w3.org/2000/svg'><path d='M1 11L6 6L0.999999 1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>"],
+    autoplay: true,
+    loop: true,
+    smartSpeed: 700,
+    margin: 20,
+    dots: false,
+    responsive : {
+      0   : {
+          items: 1
+      },
+      380 : {
+          items: 2,
+      },
+      600 : {
+          items: 3,
+      },
+      800 : {
+          items: 4,
+      },
+      1200 : {
+          items: 5
+      }
+    }
+  });
   //map
   $(document).ready(function () {
     var myMap;
@@ -167,6 +193,34 @@ $(function() {
       pause: 1500,
     });
   });
+  //ссыль на поиск пхп
+  //https://misha.blog/wordpress/drop-down-jquery-search.html
+  $(function (){
+    $('.banner__search-input')
+      .focus(function(){
+        if($(this).val() == 'privet') {
+          $(this).val('');
+        } else {
+          $('.banner__search-res').slideDown();
+        }
+        $(this).addClass('blured');
+      })
+      .blur(function(){
+        if($(this).hasClass('blured')){
+          $('.banner__search-res').slideUp();
+          if($(this).val() == ''){
+            $(this).val('');
+          }
+        }
+      })
+      .mouseout(function(){
+        $(this).addClass('blured');
+      })
+      .mouseover(function(){
+        $(this).removeClass('blured');
+      });
+  })
+
   //card slider
   var sync1 = $('.card__slider-top');
   var sync2 = $('.card__slider-bot');

@@ -264,8 +264,10 @@ input[type="number"]
   text-align: center
 .tal
   text-align: left !important
+.tar
+  text-align: right
 .und
-  text-decoration: underline
+  text-decoration: underline !important
 .upp
   text-transform: uppercase
 .ttn
@@ -287,19 +289,39 @@ a.wt
 .yel
   color: $yel
 a.yel
-  color: $yel
+  color: $yel !important
   &:hover
     color: #fff
 .fz30
   font-size: 30px
+  +r(1200)
+    font-size: 18px
 .fz22
   font-size: 22px
+  +r(1200)
+    font-size: 18px
+.fz20
+  font-size: 20px
+  +r(1200)
+    font-size: 18px
 .fz18
   font-size: 18px
+  +r(1200)
+    font-size: 16px
+.fz16
+  font-size: 16px
+  +r(1200)
+    font-size: 15px
 .fz15
   font-size: 15px
+  +r(1200)
+    font-size: 14px
 .fz13
   font-size: 13px
+  +r(1200)
+    font-size: 12px
+.fz10
+  font-size: 10px
 .btn
   font-size: 16px
   font-family: $g-bold
@@ -723,7 +745,7 @@ a.yel
           opacity: 0
           transform: scale(.5)
     &__logo
-      max-width: 80px
+      max-width: 110px
 .banner
   position: relative
   padding: 35px 0
@@ -739,6 +761,7 @@ a.yel
     position: relative
   &__logo
     +ease
+    max-width: 140px
     &:hover
       transform: scale(.9)
   &__info
@@ -778,14 +801,33 @@ a.yel
       position: absolute
       width: 20px
       height: 20px
-      top: 50%
+      top: 18px
       right: 30px
-      background: #fff url('../img/icon__loupe.svg') no-repeat 50% 50%/contain
+      background: url('../img/icon__loupe.svg') no-repeat 50% 50%/contain
       padding: 0
-      transform: translateY(-50%) scale(.96)
+      transform: scale(.96)
       border: none
       &:hover
-        transform: translateY(-50%) scale(1.05)
+        transform: scale(1.05)
+    &-res
+      position: absolute
+      top: 100%
+      z-index: 2
+      width: 100%
+      display: flex
+      flex-direction: column
+      align-items: center
+      background: #FFFFFF
+      box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.25)
+      border-bottom-right-radius: 3px
+      border-bottom-left-radius: 3px
+      display: none
+      &-item
+        width: 100%
+        padding: 8px 30px
+        +ease
+        &:hover
+          background-color: $gr
   &__test
     &-item
       display: flex
@@ -1288,11 +1330,12 @@ a.yel
     +r(1200)
       position: relative
       max-width: unset
-      left: 15px
+      left: 0
       top: 0
       transform: translate(0)
       margin-left: 0
-      padding: 0
+      padding: 15px
+      background-color: $dark
 #map
   position: absolute
   width: 100%
@@ -1353,25 +1396,6 @@ a.yel
   hr
     background-color: $lgr
     opacity: .2
-+r(1200)
-  .search_mob
-    background-color: #3b3b3bdb
-    color: #fff
-    width: 100%
-    height: calc(100vh - 68px)
-    padding: 15px
-    position: fixed
-    left: 0
-    overflow-y: scroll
-    opacity: 0
-    visibility: hidden
-    z-index: -1
-    +ease
-    &.active
-      top: 68px
-      visibility: visible
-      z-index: 999
-      opacity: 1
 .mm
   &-slideout
     z-index: auto
@@ -1386,11 +1410,12 @@ a.yel
             opacity: 1
             transform: translate(-50%,-50%) scale(1)
   &-menu
-    color: #000
+    color: $dark
     background-color: #F3F3F3
-    font-family: $g-bold
+    hr
+      opacity: .4
     &_position-bottom
-      height: calc(100% - 68px)
+      height: calc(100% - 55px)
     &__tel
       color: $dark !important
       margin-right: 30px
@@ -1409,19 +1434,45 @@ a.yel
       color: $dark !important
   &-listitem
     color: #000
+    &__text
+      padding-top: 15px
+      padding-bottom: 15px
     &:after
       left: 0 !important
       right: 0 !important
     &_selected
       .mm-listitem__text
-        background-color: $yel
+        background-color: #fff
         // color: #fff !important
     span:hover,
     a:hover
-      background-color: $yel
+      background-color: #fff
       // &>div,
       // &>span
       //   color: #fff !important
+  &-navbar__title
+    font-family: $g-bold
+    color: #000 !important
+  &-btn
+    &_next
+      &::after
+        width: 22px
+        height: 22px
+        +ct
+        background-image: url(../img/menu__arrow.svg)
+        border: none
+        border-radius: 50%
+        transform: rotate(0)
+    &_prev
+      &::before
+        width: 22px
+        height: 22px
+        +ct
+        background-image: url(../img/menu__arrow.svg)
+        border: none
+        border-radius: 50%
+        transform: rotate(180deg)
+        left: 16px
 .crumbs
   display: flex
   flex-wrap: wrap
@@ -1635,3 +1686,149 @@ a.yel
         max-width: 340px
       +r(360)
         max-width: 200px
+.stat
+  position: relative
+  color: #fff
+  background-image: url('../img/stat__bg.jpg')
+  +cv
+  &::before
+    +ovl
+    background-color: $dark
+    opacity: .95
+  .container
+    position: relative
+.rev
+  &__list
+    .owl
+      &-nav
+        button
+          &.owl
+            &-prev
+              border-color: $lgr
+              top: -74px
+              +r(1200)
+                top: -50px
+              left: auto
+              right: 45px
+              svg
+                stroke: $lgr
+            &-next
+              border-color: $lgr
+              top: -74px
+              +r(1200)
+                top: -50px
+              svg
+                stroke: $lgr
+  +r(500)
+    .section__ttl
+      max-width: 300px
+  &__item
+    position: relative
+    width: 100%
+    max-width: 170px
+    margin-left: auto
+    margin-right: auto
+    margin-bottom: 25px
+    height: 240px
+    display: flex
+    justify-content: center
+    align-items: center
+    +cv
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25)
+    border-radius: 2px
+    overflow: hidden
+    &::before
+      +ovl
+      background-color: $yel
+      opacity: 0
+      +ease
+    &-btn
+      position: relative
+      width: 52px
+      height: 53px
+      background-image: url('../img/rev__btn.svg')
+      +ct
+      +ease
+      opacity: 0
+    &:hover
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25)
+      &::before
+        opacity: .7
+      .rev__item-btn
+        opacity: 1
+  &-form
+    &__captcha
+      width: 100%
+      height: 76px
+      +ct
+      background-image: url('../img/form__captcha.jpg')
+      +r(600)
+        max-width: 303px
+        margin-left: auto
+        margin-right: auto
+    .btn
+      width: 100%
+      margin-top: 13px
+      padding-left: 5px
+      padding-right: 5px
+.contacts
+  &__img
+    width: 100%
+    height: 304px
+    +cv
+.unk
+  &__ttl
+    font-size: 200px
+    font-family: $g-bold
+    line-height: 1
+    margin-bottom: 22px
+    +r(1200)
+      font-size: 44px
+.search
+  +r(1200)
+    &_mob
+      background-color: #3b3b3bdb
+      color: #fff
+      width: 100%
+      height: calc(100vh - 55px)
+      padding: 15px
+      position: fixed
+      left: 0
+      overflow-y: scroll
+      opacity: 0
+      visibility: hidden
+      z-index: -1
+      +ease
+      &.active
+        top: 55px
+        visibility: visible
+        z-index: 999
+        opacity: 1
+  &__item
+    background-color: #fff
+    border-radius: 3px
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25)
+    padding: 25px
+    +ease
+    +r(1200)
+      text-align: center
+    &:hover
+      box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25)
+    &-img
+      width: 73px
+      height: 102px
+      +ct
+      &-wrp
+        width: 100%
+        max-width: 126px
+        height: 126px
+        border: 1px solid $lgr
+        border-radius: 3px
+        display: flex
+        justify-content: center
+        align-items: center
+        &:hover
+          opacity: .8
+        +r(1200)
+          margin-left: auto
+          margin-right: auto

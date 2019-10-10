@@ -8,7 +8,6 @@
   <title>New Project</title>
   <link rel="stylesheet" href="css/libs.min.css">
   <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/media.css">
 </head>
 <body>
   <header class="header">
@@ -67,7 +66,7 @@
               </div>
             </a>
             <a href="#" class="header_mob__logo">
-              <img src="img/main-logo.png" alt="main-logo.png" class="img-fluid">
+              <img src="img/mobile-logo.png" alt="mobile-logo.png" class="img-fluid">
             </a>
           </div>
           <div class="d-flex align-items-center">
@@ -104,8 +103,9 @@
       <div class="banner__info">
         <div class="row">
           <div class="col-xl-2 tac">
-            <a href="#" class="w-100">
-              <img src="img/main-logo.png" alt="main-logo.png" class="banner__logo img-fluid">
+            <a href="#" class="w-100 wt d-flex flex-column align-items-center">
+              <img src="img/main-logo.png" alt="main-logo.png" class="banner__logo img-fluid mb-2">
+              <span class="fz10 ">Гипермаркет расходных материалов</span>
             </a>
           </div>
           <div class="col-xl-3 d-none d-xl-block">
@@ -827,8 +827,9 @@
       <hr class="w-100 mt-4 mb-4">
       <div class="row align-items-center">
         <div class="col-xl-2 tac mb-3 mb-xl-0">
-          <a href="#" class="footer__logo">
-            <img src="img/main-logo.png" alt="main-logo.png" class="img-fluid">
+          <a href="#" class="footer__logo wt d-flex flex-column align-items-center">
+            <img src="img/main-logo.png" alt="main-logo.png" class="img-fluid mb-2">
+            <span class="fz10 ">Гипермаркет расходных материалов</span>
           </a>
         </div>
         <div class="col-xl-10 footer__copy">
@@ -837,7 +838,7 @@
       </div>
     </div>
   </footer>
-  <!--mobile menu v2-->
+  <!--mobile menu-->
   <nav id="menu" class="d-xl-none">
     <ul>
       <li>
@@ -881,12 +882,20 @@
       </li>
       <li class="pt-3">
         <span class="d-flex flex-column align-items-start">
+          <span class="row align-items-end w-100">
+            <span class="col-7">
+              <span class="d-flex flex-column">
+                <a href="tel:74994090548" class="b yel mb-1">+7 (499) 409-05-48</a>
+                <a href="tel:74999911081" class="b yel">+7 (499) 991-10-81</a>
+              </span>
+            </span>
+            <span class="col-5 tar">
+              <a href="mailto:info@lass-print.ru" class="fz13 und">info@lass-print.ru</a>
+            </span>
+          </span>
+          <hr class="w-100 mt-3 mb-3">
           <div class="b mb-2">Офис</div>
           <span class="mb-3 w-100">1-й Кожевнический пер., д. 6,<br> стр. 1, БЦ «Павелецкий»</span>
-          <div class="b mb-2">Телефоны</div>
-          <a href="tel:74994090548" class="fz22 b wt mb-1">+7 (499) 409-05-48</a>
-          <a href="tel:74999911081" class="fz22 b wt mb-2">+7 (499) 991-10-81</a>
-          <div class="b mb-2 mt-3">Мессенджеры</div>
           <a href="#" class="d-flex align-items-center wt mb-1">
             <span class="mess__icon mess__icon_wa mr-2">
               <svg width="17" height="17" viewBox="0 0 17 17" xmlns="http://www.w3.org/2000/svg">
@@ -907,7 +916,7 @@
       </li>
     </ul>
   </nav>
-  <!--/mobile menu v2-->
+  <!--/mobile menu-->
   <!--mobile search-->
   <div class="search_mob d-xl-none">
     <div class="d-flex justify-content-end mb-3">
