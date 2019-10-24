@@ -318,6 +318,24 @@ $(function() {
       });
     });
   };
+  // las dropdowns
+  $('.las__link > span').on('click', function(){
+    $('.las__link > span').removeClass('active');
+    $('.las__sub').hide();
+    $(this).toggleClass('active').parent('.las__link').find('.las__sub').slideToggle();
+  });
+  $('.las__close').on('click', function(){
+    $(this).parents('.las__link').find('span').removeClass('active');
+    $(this).parents('.las__link').find('.las__sub').slideToggle();
+  });
+  if ( $(window).width() < 600 ) {
+   // las dropdowns scroll
+    $('.las__link > span').on('click', function(){
+      $('html, body').animate({
+          scrollTop: $(".las__sub").offset().top - 50
+      }, 700);
+    });
+  };
   if ( $(window).width() < 600 ) {
     $('.tabs-acc__btn').on('click', function(){
       $(this).toggleClass('active').siblings('.tabs-acc__cnt').slideToggle();

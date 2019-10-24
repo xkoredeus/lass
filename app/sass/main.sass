@@ -738,6 +738,17 @@ a.yel
         &-svg
           fill: $yel
   &_mob
+    &__search-btn
+      position: relative
+      &::before
+        content: ''
+        position: absolute
+        width: 1px
+        height: 100%
+        left: -20px
+        top: 2px
+        background-color: #fff
+        opacity: .1
     &__hamb
       width: 23px
       height: 20px
@@ -794,7 +805,7 @@ a.yel
     fill: $lgr
   &__ttl
     color: #fff
-    font-size: 30px
+    font-size: 20px
     font-family: $g-bold
     max-width: 910px
     margin-left: auto
@@ -864,6 +875,10 @@ a.yel
       .banner__test-icon
         transform: scale(.95)
         border-color: $yel
+  &_main
+    .banner__search
+      max-width: 900px
+      margin: 0 auto
 .fil
   background: $gr
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)
@@ -1429,6 +1444,7 @@ a.yel
             opacity: 1
             transform: translate(-50%,-50%) scale(1)
   &-menu
+    font-size: 14px
     color: $dark
     background-color: #F3F3F3
     hr
@@ -2049,3 +2065,110 @@ div
               border-color: $yel
               svg
                 stroke: #fff
+.las
+  position: relative
+  &__close
+    position: absolute
+    right: 8px
+    top: 8px
+    cursor: pointer
+    +ease
+    &:hover
+      transform: rotate(180deg)
+  &__link
+    min-width: 133px
+    margin-bottom: 10px
+    +r(600)
+      min-width: 32%
+    +r(400)
+      min-width: 49%
+    &>span
+      font-size: 13px
+      background-color: $gr
+      text-align: center
+      border-radius: 3px
+      box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)
+      padding: 12px 18px
+      display: block
+      cursor: pointer
+      +ease
+      &:hover,
+      &.active
+        color: #fff
+        background-color: $yel
+      +r(1200)
+        font-size: 12px
+        padding: 4px 10px
+  &__sub
+    position: absolute
+    top: 100%
+    left: 0
+    width: 100%
+    background-color: #FFFFFF
+    box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.1)
+    border-radius: 3px
+    padding: 30px 25px
+    z-index: 1
+    display: none
+    &-link
+      font-size: 13px
+      display: block
+      width: calc(100%/8)
+      margin-bottom: 10px
+      text-decoration: underline
+      +r(1200)
+        width: calc(100%/6)
+      +r(800)
+        width: calc(100%/3)
+      +r(400)
+        width: calc(100%/2)
+      &:hover
+        color: $bl
+  &__logo
+    width: 140px
+    height: 40px
+    +ct
+    +r(1200)
+      margin-left: auto
+      margin-right: auto
+      height: 30px
+  &__tabs
+    .tabs
+      &__list
+        margin-left: 165px
+        margin-top: -40px
+        +r(1200)
+          margin-left: 0
+          margin-top: 10px
+        li
+          font-size: 13px
+          background-color: $gr
+          text-align: center
+          border-radius: 3px
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2)
+          padding: 12px 18px
+          cursor: pointer
+          margin-bottom: 8px
+          &:not(:last-child)
+            margin-right: 5px
+          &.active
+            color: #fff
+            background-color: $yel
+            box-shadow: 0px 5px 5px rgba(160, 88, 3, 0.15)
+      &__container
+        margin-top: 25px
+        position: relative
+        border-top: 1px solid $lgr
+        padding-top: 25px
+      &-acc
+        &__btn
+          &.active
+            background-color: $yel
+            color: #fff
+          +r(600)
+            padding: 8px
+            font-size: 12px
+        &__cnt
+          padding: 10px
+          +r(600)
+            display: none
