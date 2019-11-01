@@ -166,8 +166,8 @@ input[type="number"]
     list-style-type: none
     padding: 0
     margin: 0
-    +r(600)
-      display: none
+    // +r(600)
+    //   display: none
     li
       padding: 10px 15px
       +ease
@@ -709,6 +709,10 @@ a.yel
 .header
   background-color: $dark
   padding: 15px 0
+  min-height: 7vh
+  // display: flex
+  // justify-content: center
+  // align-items: center
   &__nav
     &-link
       font-size: 15px
@@ -875,7 +879,15 @@ a.yel
       .banner__test-icon
         transform: scale(.95)
         border-color: $yel
+  &__in
+    min-height: 67vh
+    display: flex
+    flex-direction: column
+    justify-content: center
   &_main
+    min-height: 93vh
+    +r(1200)
+      min-height: auto
     .banner__search
       max-width: 900px
       margin: 0 auto
@@ -931,6 +943,9 @@ a.yel
       opacity: 0
       +cv
       +ease
+      +r(1200)
+        margin-top: 0
+        margin-bottom: 20px
       &-in
         position: relative
         max-width: 870px
@@ -969,7 +984,7 @@ a.yel
           transform: translateY(-50%)
           right: 15px
           width: 80%
-          height: 300px
+          height: 200px
           // display: none
   &__img
     border-radius: 3px
@@ -1578,14 +1593,11 @@ a.yel
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25)
     padding: 25px
     +r(600)
-      .btn
-        width: 100%
       .quantity
-        // max-width: unset
-        // width: 100%
+        max-width: 154px
     &-price
       color: #05162E
-      +r(1200)
+      +r(600)
         text-align: center !important
     .btn
       padding-left: 15px
@@ -1655,21 +1667,18 @@ a.yel
           &.active
             background-color: $yel
             color: #fff
-      &-acc
-        &__btn
-          &.active
-            background-color: $yel
-            color: #fff
-        &__cnt
-          padding: 25px
-          background-color: #fff
-          box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15)
-          border-bottom-left-radius: 2px
-          border-bottom-right-radius: 2px
           +r(600)
-            font-size: 14px
-            padding: 10px
-            display: none
+            font-size: 13px
+            padding: 5px
+      &__content-item
+        padding: 25px
+        background-color: #fff
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15)
+        border-bottom-left-radius: 2px
+        border-bottom-right-radius: 2px
+        +r(600)
+          font-size: 14px
+          padding: 10px
   &__prop
     position: relative
     margin-bottom: 8px
