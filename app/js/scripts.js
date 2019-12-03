@@ -86,6 +86,29 @@ $(function() {
       }
     }
   });
+  $('.news__list').owlCarousel({
+    nav: true,
+    navText: ["<svg width='7' height='12' viewBox='0 0 7 12' xmlns='http://www.w3.org/2000/svg'><path d='M6 1L1 6L6 11' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>", "<svg width='7' height='12' viewBox='0 0 7 12' xmlns='http://www.w3.org/2000/svg'><path d='M1 11L6 6L0.999999 1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>"],
+    autoplay: false,
+    loop: false,
+    smartSpeed: 700,
+    margin: 20,
+    dots: false,
+    responsive : {
+      0   : {
+          items: 1
+      },
+      380 : {
+          items: 1,
+      },
+      600 : {
+          items: 2,
+      },
+      1200 : {
+          items: 3
+      }
+    }
+  });
   $('.rev__list').owlCarousel({
     nav: true,
     navText: ["<svg width='7' height='12' viewBox='0 0 7 12' xmlns='http://www.w3.org/2000/svg'><path d='M6 1L1 6L6 11' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>", "<svg width='7' height='12' viewBox='0 0 7 12' xmlns='http://www.w3.org/2000/svg'><path d='M1 11L6 6L0.999999 1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/></svg>"],

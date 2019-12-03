@@ -668,7 +668,7 @@ a.yel
       transform: translateX(-50%)
       background-color: $lgr
   &__ttl
-    font-size: 34px
+    font-size: 30px
     font-family: $g-bold
     letter-spacing: .5px
     margin-bottom: 35px
@@ -2181,3 +2181,61 @@ div
           padding: 10px
           +r(600)
             display: none
+
+.clearfix
+  content: ''
+  clear: both
+  display: block
+.news
+  &__item
+    display: flex
+    flex-direction: column
+    width: 100%
+    &-img
+      width: 100%
+      height: 210px
+      +cv
+      border-top-left-radius: 3px
+      border-top-right-radius: 3px
+    svg
+      fill: #B1B1B1
+      margin-top: -3px
+      +ease
+    &:hover
+      svg
+        fill: $yel
+  &-page
+    &__img
+      width: 569px
+      height: 325px
+      +cv
+      margin-right: 25px
+      margin-bottom: 25px
+      border-radius: 3px
+      float: left
+
+    &__cnt
+      svg
+        fill: #B1B1B1
+        margin-top: -3px
+  &__list
+    .owl
+      &-nav
+        button
+          &.owl
+            &-prev
+              border-color: $lgr
+              top: -74px
+              +r(1200)
+                top: -50px
+              left: auto
+              right: 45px
+              svg
+                stroke: $lgr
+            &-next
+              border-color: $lgr
+              top: -74px
+              +r(1200)
+                top: -50px
+              svg
+                stroke: $lgr
