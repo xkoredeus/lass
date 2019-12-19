@@ -934,6 +934,12 @@ a.yel:hover {
   padding-right: 10px;
 }
 
+@media only screen and (max-width: 1200px) {
+  .popup__container .popup_add__wrp * {
+    text-align: center !important;
+  }
+}
+
 .popup__container .popup_cart__wrp .popup {
   padding-left: 70px;
   padding-right: 70px;
