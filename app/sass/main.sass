@@ -261,6 +261,8 @@ input[type="number"]
   font-family: $g-bold
 .m
   font-family: $g-med
+.r
+  font-family: $g-reg
 .tac
   text-align: center
 .tal
@@ -403,6 +405,35 @@ a.yel
           transform: translateX(0%)
         &::after
           background-color: #fff
+  &--file
+    position: relative
+    cursor: pointer
+    min-height: 46px
+    background-color: $dark
+    .upload__file
+      width: 0.1px
+      height: 0.1px
+      opacity: 0
+      overflow: hidden
+      position: absolute
+      z-index: -1
+    label.filename
+      cursor: pointer
+      margin-bottom: 0
+      position: absolute
+      left: 0
+      top: 0
+      width: 100%
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      z-index: 1
+      padding: 6px 20px
+      span
+        color: #fff
+        background-color: $dark
+
   &_top
     position: fixed
     display: none
@@ -440,32 +471,6 @@ a.yel
       color: #fff
       background-color: $yel
       border-color: $yel
-  // &_file
-  //   position: relative
-  //   color: #fff
-  //   cursor: pointer
-  //   max-width: 230px
-  //   padding-right: 56px
-  //   padding-left: 15px
-  //   .upload__file
-  //     width: 0.1px
-  //     height: 0.1px
-  //     opacity: 0
-  //     overflow: hidden
-  //     position: absolute
-  //     z-index: -1
-  //   label.filename
-  //     cursor: pointer
-  //     margin-bottom: 0
-  //     cursor: pointer
-  //   img
-  //     height: 100%
-  //     position: absolute
-  //     right: 0
-  //     top: 0
-  //   &:hover
-  //     img
-  //       transform: scale(1.05)
 
 .fancy-link
   +ease
@@ -1733,6 +1738,21 @@ a.yel
         max-width: 340px
       +r(360)
         max-width: 200px
+  &-rev
+    &__in
+      padding: 15px
+    &__item
+      padding-bottom: 30px
+      +r(1200)
+        padding-bottom: 15px
+      &:not(:last-child)
+        margin-bottom: 30px
+        border-bottom: 1px solid #ccc
+        +r(1200)
+          margin-bottom: 15px
+    &__ttl
+      font-family: $g-bold
+      margin-bottom: 10px
 .stat
   position: relative
   color: #fff
@@ -2242,3 +2262,43 @@ div
                 top: -50px
               svg
                 stroke: $lgr
+.print
+  color: #000
+  &-container
+    width: 1050px
+    padding-left: 15px
+    padding-right: 15px
+    margin-left: auto
+    margin-right: auto
+  &-banner
+    padding: 30px 80px
+    background-color: #f1f1f1
+    display: flex
+    align-items: center
+    &__ttl
+      font-size: 40px
+      font-family: $g-bold
+      margin-left: 60px
+  &-table
+    tr:nth-child(odd)
+      background-color: #F6F6F6
+    td
+      &:nth-child(1)
+        padding: 13px 15px 13px 30px
+      &:nth-child(2)
+        padding: 13px 30px 13px 15px
+        text-align: right
+  &-bottom
+    max-width: 390px
+    margin-left: 50px
+    position: relative
+    &::before
+      position: absolute
+      content: ''
+      width: 1px
+      height: 40px
+      left: -25px
+      top: 50%
+      transform: translateY(-50%)
+      background-color: #000
+      opacity: .7

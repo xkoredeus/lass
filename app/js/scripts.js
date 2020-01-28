@@ -326,6 +326,14 @@ $(function() {
   $('.card__prop').hover(function(){
     $(this).find('.card__prop-pop-wrp').slideToggle(30);
   });
+    // input type file
+    $('.upload__file').change(function uploadFile() {
+        var filename = [];
+        for (var i = 0; i < $(this).get(0).files.length; ++i) {
+            filename.push($(this).get(0).files[i].name.slice(0, 18) + '...');
+        }
+        $(this).next('.filename').text(filename.join(', '));
+    });
   // tabs 
   $(document).ready(function () {
     $(".tabs__content-item:not(:first-child)").hide();
